@@ -125,7 +125,7 @@ def fig3_scatter(phone):
         ax.grid(color="#efefec", linewidth=0.6); ax.set_axisbelow(True)
         ax.text(60, 6, "List B nearer than A", color=MUTED, fontsize=9); ax.text(4, 92, "List A nearer than B", color=MUTED, fontsize=9)
     fig.tight_layout()
-    save(fig, "fig3_scatter", phone)
+    save(fig, "fig4_scatter", phone)
 
 
 def fig4_scenarios(phone):
@@ -151,7 +151,7 @@ def fig4_scenarios(phone):
         if phone or mode == "motorized":
             ax.legend(loc="lower right", frameon=False, fontsize=8.5)
     fig.tight_layout()
-    save(fig, "fig4_scenarios", phone)
+    save(fig, "fig3_scenarios", phone)
 
 
 def fig5_herams(phone):
@@ -170,7 +170,7 @@ def fig5_herams(phone):
         ax.plot([al[k], fl[k]], [yi, yi], color=RULE, linewidth=2, zorder=1)
     ax.scatter(fl[keep], y, s=44, marker="s", color=COL_B, zorder=2, label="fully functioning only")
     ax.scatter(fu[keep], y, s=70, marker="D", facecolor="white", edgecolor=COL_H, linewidths=1.3, zorder=3, label="without non-functioning")
-    ax.scatter(al[keep], y, s=20, color=COL_H, zorder=4, label="every listed facility")
+    ax.scatter(al[keep], y, s=20, color=COL_H, zorder=4, label="every used facility")
     ax.set_yticks(y); ax.set_yticklabels(names, fontsize=9)
     ax.set_xlim(-2, 102); ax.set_xlabel("% of residents over 1 h on foot")
     ax.grid(axis="x", color="#efefec"); ax.set_axisbelow(True)
