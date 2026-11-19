@@ -48,6 +48,21 @@ SOURCES = {
 }
 
 
+HDX = {  # dataset name on the Humanitarian Data Exchange for sources published there: its update date is recorded
+    "osm/health_facilities.parquet": "hotosm_moz_health_facilities",
+    "herams/moz_herams_2022-2024_by-qtr.xlsx": "health-cluster-mozambique",
+}
+
+
+def hdx_dates(name, url):
+    """Last-modified dates of an HDX dataset and of the resource with this download address."""
+    with urllib.request.urlopen(f"https://data.humdata.org/api/3/action/package_show?id={name}", timeout=60) as r:
+        m = json.load(r)["result"]
+    res = [x for x in m["resources"] if x.get("url") == url or x.get("download_url") == url]
+    return {"hdx_dataset": name, "hdx_dataset_last_modified": m.get("last_modified"),
+            "hdx_resource_last_modified": res[0].get("last_modified") if res else None}
+
+
 def sha256(p):
     h = hashlib.sha256()
     with open(p, "rb") as f:
@@ -69,6 +84,12 @@ def main():
             urllib.request.urlretrieve(url, p)
         accessed = date.today().isoformat() if fresh or rel not in old else old[rel]["accessed"]
         rec[rel] = {"url": url, "note": note, "bytes": p.stat().st_size, "sha256": sha256(p), "accessed": accessed}
+        if rel in HDX:
+            try:
+                rec[rel].update(hdx_dates(HDX[rel], url))
+            except OSError as e:   # keep what was recorded before if HDX cannot be reached
+                rec[rel].update({k: v for k, v in old.get(rel, {}).items() if k.startswith("hdx_")})
+                print("HDX not reached:", e)
     (OUT / "sources.json").write_text(json.dumps(rec, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     print("wrote outputs/sources.json")
 
