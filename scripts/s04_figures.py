@@ -154,7 +154,7 @@ def fig4_scenarios(phone):
     save(fig, "fig3_scenarios", phone)
 
 
-def fig5_herams(phone):
+def fig7_herams(phone):
     S = json.loads((A.OUT / "scenarios.json").read_text())
     idx = [i for i in S["compared_districts"] if S["district_provinces"][i] in S["herams_provinces"]]
     mode = "walking"
@@ -178,12 +178,12 @@ def fig5_herams(phone):
     ax.legend(h[::-1], l[::-1], loc="upper center", bbox_to_anchor=(0.35 if phone else 0.5, -0.11 if phone else -0.13),
               frameon=False, fontsize=9, ncol=1 if phone else 3)
     fig.tight_layout()
-    save(fig, "fig5_herams", phone)
+    save(fig, "fig7_herams", phone)
 
 
 def main():
     for phone in (False, True):
-        fig1_facilities(phone); fig2_traveltime(phone); fig3_scatter(phone); fig4_scenarios(phone); fig5_herams(phone)
+        fig1_facilities(phone); fig2_traveltime(phone); fig3_scatter(phone); fig4_scenarios(phone); fig7_herams(phone)
     print("wrote", sorted(p.name for p in WEB.glob("*.webp")))
 
 

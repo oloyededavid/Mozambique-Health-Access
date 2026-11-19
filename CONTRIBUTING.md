@@ -10,7 +10,7 @@ Python scripts that produce every number and figure on it.
   `scripts/build_paper.py` fills `paper/template.md` and checks each statement with `need()`;
   `scripts/build_page.py` builds the page from the paper; `docs/assets/explore.js` reads
   `docs/data/district_values.json`.
-- Every figure is written by `scripts/s04_figures.py`. Do not edit images by hand.
+- Every figure is written by `scripts/s04_figures.py` or `scripts/s06_more_figures.py`. Do not edit images by hand.
 - Travel times are modelled, not measured. WorldPop is a model, not a census. OpenStreetMap coverage is uneven.
   HeRAMS covers three provinces and assessments from different quarters. Say so wherever they are used.
 - The comparison with the Malaria Atlas Project's published travel-time layer is not independent (same friction
@@ -28,6 +28,7 @@ Python scripts that produce every number and figure on it.
 | Scenarios and comparisons | `python scripts/s03_scenarios.py` | `outputs/scenarios.json`, `outputs/comparisons.json`, `data/derived/tt_*.npy` |
 | Paired bootstrap | `python scripts/s03b_paired.py` | `outputs/paired.json` |
 | Figures | `python scripts/s04_figures.py` | `paper/figures/*.png`, `docs/assets/figures/*.webp` |
+| Figures from committed outputs (no raw downloads needed) | `python scripts/s06_more_figures.py` | `fig5_change_map`, `fig6_rank` in the same folders |
 | Map data | `python scripts/s05_web.py` | `docs/data/districts.geojson`, `docs/data/district_values.json`, `docs/data/district_access.csv`, copies of `outputs/*.json` |
 | Paper and page | `python scripts/build_paper.py && pandoc paper/paper.md -o paper/paper.docx --resource-path=. && python scripts/build_page.py` | `paper/paper.md`, `paper/paper.docx`, `docs/index.html` |
 | Tests | `pytest` | |

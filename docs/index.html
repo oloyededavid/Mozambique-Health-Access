@@ -136,15 +136,15 @@ used to estimate access to emergency hospital care across sub-Saharan
 Africa (Ouma et al., 2018), and earlier work in Mozambique modelled
 walking and driving access to health centres by province (dos Anjos Luis
 &amp; Cabral, 2016).</p>
-<p>Each input carries choices. Limited evidence was found in the
-reviewed literature of studies that vary these inputs together. Facility
-lists differ in coverage and in how facilities were located. Hierink et
-al. (2022) showed that the choice of gridded population dataset alone
-can change sub-national coverage by more than 70% at a one-hour
-threshold. Facilities that are listed may also not be working:
-humanitarian surveys such as the WHO Health Resources and Services
-Availability Monitoring System (HeRAMS) record whether each facility is
-functioning.</p>
+<p>Each input carries choices. Facility lists differ in coverage and in
+how facilities were located. Hierink et al. (2022) showed that the
+choice of gridded population dataset alone can change sub-national
+coverage by more than 70% at a one-hour threshold. Facilities that are
+listed may also not be working: humanitarian surveys such as the WHO
+Health Resources and Services Availability Monitoring System (HeRAMS)
+record whether each facility is functioning. Limited evidence was found
+in the reviewed literature of studies that vary these inputs
+together.</p>
 <p>This study asks how much district estimates of travel time in
 Mozambique change with the facility list, the mode of travel, the type
 of facility counted, facility functionality and the population layer. It
@@ -156,10 +156,11 @@ measured journeys.</p>
 health facility database of Maina et al. (2019), distributed as the file
 “00 SSA MFL (130219).xlsx” (Snow et al., 2019; figshare, CC0). It has
 1,579 facilities, all with coordinates: 1,256 health centres
-(<em>centros de saúde</em>), 262 health posts and 61 hospitals. 1,575
-lie within 1 km of the national outline and are used. The database also
-lists facilities in the six neighbouring countries; 3,776 of them fall
-inside the analysis grid and are used only in a sensitivity run.</p>
+(<em>centros de saúde</em>), 262 health posts and 61 hospitals. Of
+these, 1,575 lie within 1 km of the national outline and are used. The
+database also lists facilities in the six neighbouring countries; 3,776
+of them fall inside the analysis grid and are used only in a sensitivity
+run.</p>
 <p><strong>List B</strong> is the OpenStreetMap health-facility layer
 for Mozambique exported by the Humanitarian OpenStreetMap Team
 (Humanitarian OpenStreetMap Team, 2026; file updated on the Humanitarian
@@ -170,10 +171,10 @@ is missing, its <code>healthcare</code> tag is clinic, hospital, centre,
 doctor or health post. This gives 1,057 facilities used, 197 of them
 hospitals. The 133 pharmacies are left out of the main run because they
 do not offer consultations, and are added back as a sensitivity run, in
-which the 131 that lie within Mozambique are used. 14 other features are
-left out: <code>healthcare=yes</code> (6), <code>amenity=dentist</code>
-(3), <code>healthcare=laboratory</code> (2),
-<code>healthcare=Urgências_Médicas_e_Laboratório;</code> (1),
+which the 131 that lie within Mozambique are used. Another 14 features
+are left out: <code>healthcare=yes</code> (6),
+<code>amenity=dentist</code> (3), <code>healthcare=laboratory</code>
+(2), <code>healthcare=Urgências_Médicas_e_Laboratório;</code> (1),
 <code>healthcare=optometrist</code> (1),
 <code>healthcare=psychotherapist</code> (1). Buildings and grounds
 mapped as outlines (248 features) are reduced to one point inside the
@@ -191,11 +192,11 @@ are repeated across different facilities, so we identify a facility by
 its cleaned name and its province and district, which gives 672
 facilities, and keep the latest assessment of each. The latest
 assessments range from 2022 Q1 to 2024 Q3, and 378 are from 2024, so the
-file is not a single snapshot. 135 facilities have no coordinates in any
-assessment; one more had its coordinates one column to the right and was
+file is not a single snapshot. No assessment gives coordinates for 135
+facilities; one more had its coordinates one column to the right and was
 corrected. Of the 537 facilities with coordinates, we drop those more
 than 1 km outside Mozambique or outside the province they report,
-leaving 531. 225 facilities are marked as having approximate coordinates
+leaving 531. Of these, 225 are marked as having approximate coordinates
 and are kept. The functionality field (<code>HFFUNCT</code>) of the 531
 used facilities reads fully functioning for 446, partially functioning
 for 44, non-functioning for 9 and is empty for 32. In the whole file, 10
@@ -265,23 +266,23 @@ the difference between the two rank correlations (paired bootstrap,
 <h2 id="results">3. Results</h2>
 <h3 id="positions-of-the-facilities">3.1 Positions of the
 facilities</h3>
-<p>4 list A facilities lie more than 1 km outside Mozambique (at most
-3.9 km), against 21 in list B (at most 6.4 km) and 4 in HeRAMS (at most
-116 km). 19, 16 and 4 facilities fall on a sea cell of the grid, usually
-because the 0.9 km cell at the coast is mostly sea, and 7, 2 and 1 on a
-cell of inland water. The point lies in a different province from the
-one its source reports for 1 of the list A facilities and 2 of the
-HeRAMS facilities.</p>
-<p>The two lists overlap closely where both have a facility. 68% of list
-B lies within 100 m of a list A facility, and the median distance from a
-list B facility to the nearest list A facility is 32 m, which suggests
-that many OpenStreetMap points were copied from the same source or
-mapped from the same survey. In the other direction, 52% of list A
-facilities have a list B facility within 1 km and 27% have none within
-10 km: list B is missing many rural facilities that list A has (Figure
-1). 713 pairs are each other’s nearest neighbour within 1 km. HeRAMS
-facilities lie a median of 378 m from the nearest list A facility, and
-20% are more than 10 km from any.</p>
+<p>In list A, 4 facilities lie more than 1 km outside Mozambique (at
+most 3.9 km), against 21 in list B (at most 6.4 km) and 4 in HeRAMS (at
+most 116 km). In the same order, 19, 16 and 4 facilities fall on a sea
+cell of the grid, usually because the 0.9 km cell at the coast is mostly
+sea, and 7, 2 and 1 on a cell of inland water. The point lies in a
+different province from the one its source reports for 1 of the list A
+facilities and 2 of the HeRAMS facilities.</p>
+<p>The two lists overlap closely where both have a facility. Of the list
+B facilities, 68% lie within 100 m of a list A facility, and the median
+distance from a list B facility to the nearest list A facility is 32 m,
+which suggests that many OpenStreetMap points were copied from the same
+source or mapped from the same survey. In the other direction, 52% of
+list A facilities have a list B facility within 1 km and 27% have none
+within 10 km: list B is missing many rural facilities that list A has
+(Figure 1). In all, 713 pairs are each other’s nearest neighbour within
+1 km. HeRAMS facilities lie a median of 378 m from the nearest list A
+facility, and 20% are more than 10 km from any.</p>
 <figure class="wide mapimg" id="fig-1">
 <picture><source media="(max-width: 760px)" srcset="assets/figures/fig1_facilities_phone.webp"><img src="assets/figures/fig1_facilities.webp" width="1487" height="1057" loading="lazy" alt="Facilities used in the main runs. List A: Maina et al. (2019), public sector. List B: OpenStreetMap, without pharmacies. Open circles are hospitals."></picture>
 <figcaption>
@@ -475,13 +476,13 @@ rankings</h3>
 <p>District shares agree less than the national ones (Table 2, Figure
 4). Between list A and list B, the rank correlation of the district
 shares beyond one hour is 0.79 by motor (95% interval 0.68 to 0.88) and
-0.69 on foot (0.55 to 0.79). 26 districts change by more than 10 points
-by motor and 60 on foot, and 16 and 30 by more than 20 points. The
-largest change is 94 points by motor, in Chifunde, and 97 points on
-foot, in Cidade De Lichinga; list B has no facility in either district,
-where list A has 7 and 12. Of the 20 districts with the highest
-motorized share under list A, 13 are also among the 20 highest under
-list B (9 on foot). Adding list B to list A changes less: the rank
+0.69 on foot (0.55 to 0.79). By motor, 26 districts change by more than
+10 points, and 60 on foot (Figure 5); 16 and 30 change by more than 20
+points. The largest change is 94 points by motor, in Chifunde, and 97
+points on foot, in Cidade De Lichinga; list B has no facility in either
+district, where list A has 7 and 12. Of the 20 districts with the
+highest motorized share under list A, 13 are also among the 20 highest
+under list B (9 on foot). Adding list B to list A changes less: the rank
 correlation is 0.97 by motor and 0.97 on foot, and 1 and 5 districts
 change by more than 10 points.</p>
 <p><strong>Table 2.</strong> How district shares beyond one hour change
@@ -587,22 +588,40 @@ nearest facility under list A and list B. Each point is a district;
 points above the line are districts where list B gives a longer time.
 </figcaption>
 </figure>
+<figure class="wide mapimg" id="fig-5">
+<picture><source media="(max-width: 760px)" srcset="assets/figures/fig5_change_map_phone.webp"><img src="assets/figures/fig5_change_map.webp" width="1494" height="1253" loading="lazy" alt="Change in each district's share of residents more than one hour from the nearest facility when list B replaces list A, in percentage points. Orange: more residents beyond one hour with list B; blue: fewer. Hatched units (a lake and two islands) are not compared."></picture>
+<figcaption>
+<b>Figure 5.</b> Change in each district’s share of residents more than
+one hour from the nearest facility when list B replaces list A, in
+percentage points. Orange: more residents beyond one hour with list B;
+blue: fewer. Hatched units (a lake and two islands) are not compared.
+</figcaption>
+</figure>
 <p>The mode of travel and the type of facility tended to reorder
-districts more than the facility list, although the intervals overlap.
-With both lists together, the rank correlation between motorized and
-walking shares is 0.62 (0.48 to 0.74), and only 7 of the 20 districts
-with the highest motorized share are among the 20 highest on foot.
-Between all facilities and hospitals only, the rank correlation is 0.67
-by motor (0.56 to 0.76) and 0.56 on foot (0.43 to 0.67). In the paired
-bootstrap, the rank correlation between lists A and B exceeds that
-between all facilities and hospitals by 0.12 by motor (95% interval 0.01
-to 0.23) and 0.12 on foot (−0.04 to 0.29), and exceeds that between
+districts more than the facility list, although the intervals overlap
+(Figure 6). With both lists together, the rank correlation between
+motorized and walking shares is 0.62 (0.48 to 0.74), and only 7 of the
+20 districts with the highest motorized share are among the 20 highest
+on foot. Between all facilities and hospitals only, the rank correlation
+is 0.67 by motor (0.56 to 0.76) and 0.56 on foot (0.43 to 0.67). In the
+paired bootstrap, the rank correlation between lists A and B exceeds
+that between all facilities and hospitals by 0.12 by motor (95% interval
+0.01 to 0.23) and 0.12 on foot (−0.04 to 0.29), and exceeds that between
 motorized and walking travel by 0.17 (0.05 to 0.30) when the lists are
 compared by motor and 0.06 (−0.11 to 0.23) when they are compared on
 foot. Only the motorized intervals exclude zero. For hospitals alone,
 lists A and B give a rank correlation of 0.73 by motor, and 54 districts
 change by more than 10 points, partly because the lists define hospitals
 differently.</p>
+<figure class="wide mapimg" id="fig-6">
+<picture><source media="(max-width: 760px)" srcset="assets/figures/fig6_rank_phone.webp"><img src="assets/figures/fig6_rank.webp" width="1656" height="948" loading="lazy" alt="Rank correlation of district shares beyond one hour between pairs of runs, with 95% bootstrap intervals over districts. Lower values mean the choice reorders districts more. The intervals treat districts as independent, so they are likely too narrow."></picture>
+<figcaption>
+<b>Figure 6.</b> Rank correlation of district shares beyond one hour
+between pairs of runs, with 95% bootstrap intervals over districts.
+Lower values mean the choice reorders districts more. The intervals
+treat districts as independent, so they are likely too narrow.
+</figcaption>
+</figure>
 <p>The population layer changes district rankings about as much as the
 facility list: the rank correlation between the constrained and
 unconstrained layers is 0.80 by motor and 0.75 on foot, 58 districts
@@ -648,13 +667,13 @@ motor 25 points, in Ibo). The strict rule changes more: 12 districts
 change by more than 10 points on foot and 6 by motor. The largest change
 in both modes is in Macomia: 68 points on foot and 95 by motor. The rank
 correlation with the all-facility run falls to 0.65 on foot (0.41 to
-0.85) (Figure 5). The districts that change most under both rules are in
+0.85) (Figure 7). The districts that change most under both rules are in
 Cabo Delgado, but the strict rule also removes facilities whose status
 is simply missing.</p>
-<figure class="wide mapimg" id="fig-5">
-<picture><source media="(max-width: 760px)" srcset="assets/figures/fig5_herams_phone.webp"><img src="assets/figures/fig5_herams.webp" width="1495" height="837" loading="lazy" alt="The twelve districts of Cabo Delgado, Nampula and Zambézia whose share of residents more than one hour from a facility on foot changes most between the HeRAMS rules."></picture>
+<figure class="wide mapimg" id="fig-7">
+<picture><source media="(max-width: 760px)" srcset="assets/figures/fig7_herams_phone.webp"><img src="assets/figures/fig7_herams.webp" width="1495" height="837" loading="lazy" alt="The twelve districts of Cabo Delgado, Nampula and Zambézia whose share of residents more than one hour from a facility on foot changes most between the HeRAMS rules."></picture>
 <figcaption>
-<b>Figure 5.</b> The twelve districts of Cabo Delgado, Nampula and
+<b>Figure 7.</b> The twelve districts of Cabo Delgado, Nampula and
 Zambézia whose share of residents more than one hour from a facility on
 foot changes most between the HeRAMS rules.
 </figcaption>
@@ -744,7 +763,7 @@ would show how much they can be relied on.</p>
         <dt>Friction surface</dt><dd>A grid that gives the time needed to cross each cell, from roads, land cover, slope and water. The Malaria Atlas Project publishes one for motorized travel and one for walking only, for 2020.</dd>
         <dt>List A</dt><dd>Public-sector health facilities compiled by Maina et al. (2019) from national lists, with coordinates.</dd>
         <dt>List B</dt><dd>Health facilities mapped in OpenStreetMap, as exported by the Humanitarian OpenStreetMap Team. Pharmacies are left out of the main runs.</dd>
-        <dt>HeRAMS</dt><dd>The WHO Health Resources and Services Availability Monitoring System. Its Mozambique file records, for three northern provinces, whether each facility was functioning when last assessed in 2022–2024.</dd>
+        <dt>HeRAMS</dt><dd>The WHO Health Resources and Services Availability Monitoring System. Its Mozambique file records, for three provinces in the north and centre, whether each facility was functioning when last assessed in 2022–2024.</dd>
         <dt>Constrained and unconstrained population</dt><dd>Two WorldPop maps of where people live. The constrained map puts people only on mapped settlements; the unconstrained map spreads them over all land. Both are models, not census counts.</dd>
         <dt>Share beyond one hour</dt><dd>The share of a district's modelled residents whose travel time to the nearest facility is more than 60 minutes. Residents who cannot reach any facility count as beyond.</dd>
         <dt>Rank correlation</dt><dd>Spearman's rank correlation between two sets of district values. 1 means the districts come in the same order under both; lower values mean the order changes.</dd>
