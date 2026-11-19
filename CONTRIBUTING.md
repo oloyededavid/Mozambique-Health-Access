@@ -26,6 +26,7 @@ Python scripts that produce every number and figure on it.
 | Facility rules and checks | `python scripts/s01_facilities.py` | `data/derived/facilities.parquet`, `data/derived/districts.parquet`, `outputs/facilities.json`, `docs/data/facilities.csv` |
 | Grid and population tables | `python scripts/s02_grid.py` | `data/derived/grid.npz`, `data/derived/pop_*.npz`, `outputs/population.json` |
 | Scenarios and comparisons | `python scripts/s03_scenarios.py` | `outputs/scenarios.json`, `outputs/comparisons.json`, `data/derived/tt_*.npy` |
+| Paired bootstrap | `python scripts/s03b_paired.py` | `outputs/paired.json` |
 | Figures | `python scripts/s04_figures.py` | `paper/figures/*.png`, `docs/assets/figures/*.webp` |
 | Map data | `python scripts/s05_web.py` | `docs/data/districts.geojson`, `docs/data/district_values.json`, `docs/data/district_access.csv`, copies of `outputs/*.json` |
 | Paper and page | `python scripts/build_paper.py && pandoc paper/paper.md -o paper/paper.docx --resource-path=. && python scripts/build_page.py` | `paper/paper.md`, `paper/paper.docx`, `docs/index.html` |

@@ -48,6 +48,7 @@ python scripts/s00_download.py      # about 620 MB into data/raw/ (not committed
 python scripts/s01_facilities.py    # facility rules and positional checks
 python scripts/s02_grid.py          # friction grid and population tables
 python scripts/s03_scenarios.py     # all scenarios and comparisons (a few minutes)
+python scripts/s03b_paired.py       # paired bootstrap of differences between rank correlations
 python scripts/s04_figures.py       # figures
 python scripts/s05_web.py           # data for the district map
 python scripts/build_paper.py && pandoc paper/paper.md -o paper/paper.docx --resource-path=. && python scripts/build_page.py
