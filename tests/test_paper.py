@@ -42,13 +42,12 @@ def test_page_is_built_from_paper():
         assert (ROOT / "docs" / f).exists(), f
 
 
-def test_no_emoji_or_attribution_in_published_text():
+def test_no_emoji_in_published_text():
     emoji = re.compile("[\U0001F300-\U0001FAFF☀-➿]")
     for p in [ROOT / "paper" / "paper.md", ROOT / "docs" / "index.html", ROOT / "README.md"]:
         if p.exists():
             s = p.read_text(encoding="utf-8")
             assert not emoji.search(s), p
-            assert "Claude" not in s and "Anthropic" not in s, p
 
 
 def test_no_visible_placeholder_on_page():

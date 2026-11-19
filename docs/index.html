@@ -91,9 +91,9 @@ are modelled to live more than an hour from a health facility, depending
 on which of two open facility lists, or both together, is used; on foot
 the figure is between 44.9% and 55.4%. These national figures move by a
 few percentage points with the facility list, but the figure for a
-single district can move by up to 94 points, and the choice of
-population map matters as much. All travel times here are modelled, not
-measured.</p>
+single district can move by up to 94 points by motor (97 on foot), and
+the choice of population map matters as much. All travel times here are
+modelled, not measured.</p>
 <h2 id="abstract">Abstract</h2>
 <p>Estimates of how far people live from health care depend on which
 facilities are counted, how people are assumed to travel and where the
@@ -108,18 +108,18 @@ motorized transport, 7.4% of residents are modelled to live more than
 one hour from a list A facility and 11.3% from a list B facility; on
 foot the shares are 46.6% and 55.4%. Across districts, the share beyond
 one hour under the two lists has a rank correlation of 0.79 by motor and
-0.69 on foot, and 26 and 60 districts change by more than 10 percentage
-points. Counting hospitals only, or switching from motorized to walking
-travel, tended to reorder districts more (intervals overlap). Replacing
-the WorldPop R2025A constrained population layer with the older
-unconstrained layer raises the national motorized share from 7.4% to
-14.2%, more than switching lists does; the two layers differ in release
-and inputs as well as in constraint. In three provinces in the north and
-centre, removing the 9 facilities (of 10 in the file) that the WHO
-HeRAMS survey reports as not functioning barely changes the provincial
-share on foot (57.4% to 57.5%), but a few districts move by up to 22
-points. All travel times are modelled; none was compared with measured
-journeys.</p>
+0.69 on foot, and 26 districts (motorized) and 60 (walking) change by
+more than 10 percentage points. Counting hospitals only, or switching
+from motorized to walking travel, tended to reorder districts more
+(intervals overlap). Replacing the WorldPop R2025A constrained
+population layer with the older unconstrained layer raises the national
+motorized share from 7.4% to 14.2%, more than switching lists does; the
+two layers differ in release and inputs as well as in constraint. In
+three provinces in the north and centre, removing the 9 facilities (of
+10 in the file) that the WHO HeRAMS survey reports as not functioning
+barely changes the provincial share on foot (57.4% to 57.5%), but a few
+districts move by up to 22 points. All travel times are modelled; none
+was compared with measured journeys.</p>
 <p><strong>Keywords:</strong> geographic access; health facilities;
 travel time; friction surface; OpenStreetMap; Mozambique</p>
 <h2 id="introduction">1. Introduction</h2>
@@ -477,9 +477,9 @@ rankings</h3>
 4). Between list A and list B, the rank correlation of the district
 shares beyond one hour is 0.79 by motor (95% interval 0.68 to 0.88) and
 0.69 on foot (0.55 to 0.79). By motor, 26 districts change by more than
-10 points, and 60 on foot (Figure 5); 16 and 30 change by more than 20
-points. The largest change is 94 points by motor, in Chifunde, and 97
-points on foot, in Cidade De Lichinga; list B has no facility in either
+10 points, and 60 on foot (Figure 5); by more than 20 points, 16 and 30
+do. The largest change is 94 points by motor, in Chifunde, and 97 points
+on foot, in Cidade De Lichinga; list B has no facility in either
 district, where list A has 7 and 12. Of the 20 districts with the
 highest motorized share under list A, 13 are also among the 20 highest
 under list B (9 on foot). Adding list B to list A changes less: the rank
@@ -589,7 +589,7 @@ points above the line are districts where list B gives a longer time.
 </figcaption>
 </figure>
 <figure class="wide mapimg" id="fig-5">
-<picture><source media="(max-width: 760px)" srcset="assets/figures/fig5_change_map_phone.webp"><img src="assets/figures/fig5_change_map.webp" width="1494" height="1253" loading="lazy" alt="Change in each district's share of residents more than one hour from the nearest facility when list B replaces list A, in percentage points. Orange: more residents beyond one hour with list B; blue: fewer. Hatched units (a lake and two islands) are not compared."></picture>
+<picture><source media="(max-width: 760px)" srcset="assets/figures/fig5_change_map_phone.webp"><img src="assets/figures/fig5_change_map.webp" width="1494" height="1186" loading="lazy" alt="Change in each district's share of residents more than one hour from the nearest facility when list B replaces list A, in percentage points. Orange: more residents beyond one hour with list B; blue: fewer. Hatched units (a lake and two islands) are not compared."></picture>
 <figcaption>
 <b>Figure 5.</b> Change in each district’s share of residents more than
 one hour from the nearest facility when list B replaces list A, in
@@ -614,7 +614,7 @@ lists A and B give a rank correlation of 0.73 by motor, and 54 districts
 change by more than 10 points, partly because the lists define hospitals
 differently.</p>
 <figure class="wide mapimg" id="fig-6">
-<picture><source media="(max-width: 760px)" srcset="assets/figures/fig6_rank_phone.webp"><img src="assets/figures/fig6_rank.webp" width="1656" height="948" loading="lazy" alt="Rank correlation of district shares beyond one hour between pairs of runs, with 95% bootstrap intervals over districts. Lower values mean the choice reorders districts more. The intervals treat districts as independent, so they are likely too narrow."></picture>
+<picture><source media="(max-width: 760px)" srcset="assets/figures/fig6_rank_phone.webp"><img src="assets/figures/fig6_rank.webp" width="1674" height="948" loading="lazy" alt="Rank correlation of district shares beyond one hour between pairs of runs, with 95% bootstrap intervals over districts. Lower values mean the choice reorders districts more. The intervals treat districts as independent, so they are likely too narrow."></picture>
 <figcaption>
 <b>Figure 6.</b> Rank correlation of district shares beyond one hour
 between pairs of runs, with 95% bootstrap intervals over districts.
@@ -766,7 +766,7 @@ would show how much they can be relied on.</p>
         <dt>HeRAMS</dt><dd>The WHO Health Resources and Services Availability Monitoring System. Its Mozambique file records, for three provinces in the north and centre, whether each facility was functioning when last assessed in 2022–2024.</dd>
         <dt>Constrained and unconstrained population</dt><dd>Two WorldPop maps of where people live. The constrained map puts people only on mapped settlements; the unconstrained map spreads them over all land. Both are models, not census counts.</dd>
         <dt>Share beyond one hour</dt><dd>The share of a district's modelled residents whose travel time to the nearest facility is more than 60 minutes. Residents who cannot reach any facility count as beyond.</dd>
-        <dt>Rank correlation</dt><dd>Spearman's rank correlation between two sets of district values. 1 means the districts come in the same order under both; lower values mean the order changes.</dd>
+        <dt>Rank correlation</dt><dd>Spearman's rank correlation between two sets of district values. A value of 1 means the districts come in the same order under both; lower values mean the order changes.</dd>
         <dt>Percentage point</dt><dd>The difference between two percentages. A share that moves from 20% to 30% changes by 10 points.</dd>
     </dl>
 </section>
