@@ -1,0 +1,56 @@
+<!-- page-end:start -->
+<section id="key-terms" aria-labelledby="h-terms">
+    <h2 id="h-terms">Key terms</h2>
+    <dl class="glossary">
+        <dt>Travel time</dt><dd>The modelled time from where a person lives to the nearest listed facility, along the fastest path over the map. It is not a measured journey.</dd>
+        <dt>Friction surface</dt><dd>A grid that gives the time needed to cross each cell, from roads, land cover, slope and water. The Malaria Atlas Project publishes one for motorized travel and one for walking only, for 2020.</dd>
+        <dt>List A</dt><dd>Public-sector health facilities compiled by Maina et al. (2019) from national lists, with coordinates.</dd>
+        <dt>List B</dt><dd>Health facilities mapped in OpenStreetMap, as exported by the Humanitarian OpenStreetMap Team. Pharmacies are left out of the main runs.</dd>
+        <dt>HeRAMS</dt><dd>The WHO Health Resources and Services Availability Monitoring System. Its Mozambique file records, for three northern provinces, whether each facility was functioning when last assessed in 2022–2024.</dd>
+        <dt>Constrained and unconstrained population</dt><dd>Two WorldPop maps of where people live. The constrained map puts people only on mapped settlements; the unconstrained map spreads them over all land. Both are models, not census counts.</dd>
+        <dt>Share beyond one hour</dt><dd>The share of a district's modelled residents whose travel time to the nearest facility is more than 60 minutes. Residents who cannot reach any facility count as beyond.</dd>
+        <dt>Rank correlation</dt><dd>Spearman's rank correlation between two sets of district values. 1 means the districts come in the same order under both; lower values mean the order changes.</dd>
+        <dt>Percentage point</dt><dd>The difference between two percentages. A share that moves from 20% to 30% changes by 10 points.</dd>
+    </dl>
+</section>
+
+<section id="data-code" aria-labelledby="h-dc">
+    <h2 id="h-dc">Data, code and citation</h2>
+    <ul class="downloads">
+        <li><a href="data/district_access.csv" download>district_access.csv</a><span>District shares and median times for lists A, B and both</span></li>
+        <li><a href="data/district_values.json" download>district_values.json</a><span>Values behind the district map</span></li>
+        <li><a href="data/comparisons.json" download>comparisons.json</a><span>Rank correlations and changes between scenarios</span></li>
+        <li><a href="data/facilities.csv" download>facilities.csv</a><span>Facility points with their checks (OpenStreetMap rows under the ODbL)</span></li>
+        <li><a href="data/facilities.json" download>facilities.json</a><span>Facility counts, positional checks and matching</span></li>
+        <li><a href="data/sources.json" download>sources.json</a><span>Source files with web address, size and SHA-256</span></li>
+        <li><a href="https://github.com/oloyededavid/Mozambique-Health-Access/raw/main/paper/paper.docx">Paper (Word)</a><span>Same text, for printing or comment</span></li>
+        <li><a href="https://github.com/oloyededavid/Mozambique-Health-Access">Repository</a><span>Scripts and tests</span></li>
+    </ul>
+    <h3 id="cite">How to cite</h3>
+    <div class="citation">
+        <p id="cite-text">Oloyede, D. O. (2026). <i>Travel time to health facilities in Mozambique: how district access estimates change with the facility list, mode of travel and facility functionality</i>. https://github.com/oloyededavid/Mozambique-Health-Access</p>
+        <button type="button" class="button" id="copy-cite">Copy citation</button>
+    </div>
+</section>
+
+<section class="note" aria-labelledby="h-note">
+    <h2 id="h-note">A note from me</h2>
+    <!-- PLACEHOLDER: David to rewrite this note in his own words before publishing. -->
+    <p>Thank you for reading. This study does not say how long journeys to clinics in Mozambique take; it shows how much a modelled answer depends on the choices behind it.</p>
+    <p>If you know these districts, or have measured travel times or a newer facility list, I would like to hear from you: <a href="https://github.com/oloyededavid/Mozambique-Health-Access/issues">open an issue on the repository</a>.</p>
+    <p class="sign">David</p>
+</section>
+
+<section id="feedback" class="feedback" aria-labelledby="h-fb">
+    <h2 id="h-fb">Was this research useful?</h2>
+    <div class="react-row">
+        <div class="reactions" role="group" aria-labelledby="h-fb">
+            <button type="button" class="button react" data-react="Useful" aria-pressed="false">Useful <span class="rc"></span></button>
+            <button type="button" class="button react" data-react="Interesting" aria-pressed="false">Interesting <span class="rc"></span></button>
+            <button type="button" class="button react" data-react="Needs clarity" aria-pressed="false">Needs clarity <span class="rc"></span></button>
+        </div>
+        <span class="react-status" id="react-status" role="status"></span>
+    </div>
+    <p class="react-note">One reaction per browser. Counts are anonymous and kept by a public counter.</p>
+</section>
+<!-- page-end:end -->
