@@ -1,0 +1,217 @@
+{
+ "lists": {
+  "A": {
+   "label": "Maina et al. (2019)",
+   "n_points": 1579,
+   "n_used": 1575,
+   "n_hospital_used": 61,
+   "n_outside_moz_over_1km": 4,
+   "max_outside_km": 3.8645636170848596,
+   "n_in_sea_cell": 19,
+   "n_in_inland_water_cell": 7,
+   "n_duplicate_coords": 0,
+   "n_province_mismatch": 2,
+   "by_province_used": {
+    "Cabo Delgado": 112,
+    "Gaza": 133,
+    "Inhambane": 125,
+    "Manica": 104,
+    "Maputo": 146,
+    "Nampula": 210,
+    "Niassa": 159,
+    "Sofala": 229,
+    "Tete": 129,
+    "Zambézia": 228
+   },
+   "n_rows_mozambique": 1579,
+   "by_type": {
+    "Centro de Saúde Rural II": 982,
+    "Posto de Saúde": 262,
+    "Centro de Saúde Rural I": 130,
+    "Centro de Saúde Urbano B": 56,
+    "Centro de Saúde Urbano C": 49,
+    "Centro de Saúde Urbano A": 39,
+    "Hospital Rural": 29,
+    "Hospital Distrital": 16,
+    "Hospital Provincial": 8,
+    "Hospital Geral": 5,
+    "Hospital Central": 3
+   }
+  },
+  "B": {
+   "label": "OpenStreetMap (HOT export)",
+   "n_points": 1209,
+   "n_used": 1188,
+   "n_hospital_used": 197,
+   "n_outside_moz_over_1km": 21,
+   "max_outside_km": 6.437408003207586,
+   "n_in_sea_cell": 16,
+   "n_in_inland_water_cell": 2,
+   "n_duplicate_coords": 0,
+   "n_province_mismatch": null,
+   "by_province_used": {
+    "Cabo Delgado": 168,
+    "Gaza": 69,
+    "Inhambane": 71,
+    "Manica": 93,
+    "Maputo": 202,
+    "Nampula": 162,
+    "Niassa": 113,
+    "Sofala": 99,
+    "Tete": 26,
+    "Zambézia": 185
+   },
+   "n_features": 1223,
+   "amenity_counts": {
+    "clinic": 782,
+    "hospital": 197,
+    "pharmacy": 133,
+    "doctors": 81,
+    "None": 26,
+    "dentist": 3,
+    "health_post": 1
+   },
+   "excluded_types": {
+    "healthcare=yes": 6,
+    "dentist": 3,
+    "healthcare=laboratory": 2,
+    "healthcare=Urgências_Médicas_e_Laboratório;": 1,
+    "healthcare=optometrist": 1,
+    "healthcare=psychotherapist": 1
+   },
+   "n_facility": 876,
+   "n_hospital": 200,
+   "n_pharmacy": 133,
+   "n_polygons": 248
+  },
+  "H": {
+   "label": "HeRAMS 2022-2024",
+   "n_points": 537,
+   "n_used": 531,
+   "n_hospital_used": 25,
+   "n_outside_moz_over_1km": 4,
+   "max_outside_km": 115.57536807445486,
+   "n_in_sea_cell": 4,
+   "n_in_inland_water_cell": 1,
+   "n_duplicate_coords": 8,
+   "n_province_mismatch": 2,
+   "by_province_used": {
+    "Cabo Delgado": 129,
+    "Nampula": 191,
+    "Zambézia": 211
+   },
+   "n_rows": 676,
+   "n_subject_ids": 676,
+   "n_facilities": 672,
+   "n_without_coords": 135,
+   "n_coord_column_shift_fixed": 1,
+   "n_approx_coords": 225,
+   "latest_quarter": {
+    "2022 - Q1": 1,
+    "2022 - Q2": 4,
+    "2022 - Q3": 1,
+    "2023 - Q1": 74,
+    "2023 - Q2": 137,
+    "2023 - Q3": 21,
+    "2023 - Q4": 51,
+    "2024 - Q1": 7,
+    "2024 - Q2": 256,
+    "2024 - Q3": 115,
+    "nan": 5
+   },
+   "status_latest": {
+    "Fully Functioning": 579,
+    "Partially Functioning": 49,
+    "missing": 34,
+    "Non-Functioning": 10
+   },
+   "status_used": {
+    "Fully Functioning": 446,
+    "Partially Functioning": 44,
+    "missing": 32,
+    "Non-Functioning": 9
+   },
+   "provinces": [
+    "Cabo Delgado",
+    "Nampula",
+    "Zambezia"
+   ]
+  },
+  "A_cross": {
+   "n_points": 3776,
+   "by_country": {
+    "Zimbabwe": 965,
+    "Tanzania": 851,
+    "South Africa": 785,
+    "Malawi": 639,
+    "Zambia": 404,
+    "eSwatini": 132
+   }
+  }
+ },
+ "matching": {
+  "A_to_B": {
+   "n": 1575,
+   "median_km": 0.7273802263052913,
+   "share_within_100m": 0.4336507936507937,
+   "share_within_1km": 0.5187301587301587,
+   "share_within_5km": 0.633015873015873,
+   "share_over_10km": 0.26857142857142857
+  },
+  "B_to_A": {
+   "n": 1057,
+   "median_km": 0.03170881191908062,
+   "share_within_100m": 0.6830652790917692,
+   "share_within_1km": 0.7975402081362346,
+   "share_within_5km": 0.8893093661305582,
+   "share_over_10km": 0.07757805108798486
+  },
+  "A_to_H": {
+   "n": 550,
+   "median_km": 0.43930083935095504,
+   "share_within_100m": 0.4090909090909091,
+   "share_within_1km": 0.5763636363636364,
+   "share_within_5km": 0.6963636363636364,
+   "share_over_10km": 0.23636363636363636
+  },
+  "H_to_A": {
+   "n": 531,
+   "median_km": 0.37847358099480344,
+   "share_within_100m": 0.4387947269303202,
+   "share_within_1km": 0.5894538606403014,
+   "share_within_5km": 0.7175141242937854,
+   "share_over_10km": 0.2015065913370998
+  },
+  "mutual_A_B_within_1km": 713
+ },
+ "districts": {
+  "n": 159,
+  "n_provinces": 10,
+  "provinces": [
+   "Cabo Delgado",
+   "Gaza",
+   "Inhambane",
+   "Manica",
+   "Maputo",
+   "Nampula",
+   "Niassa",
+   "Sofala",
+   "Tete",
+   "Zambézia"
+  ]
+ },
+ "border_tolerance_m": 1000,
+ "osm_rule": {
+  "facility_amenity": [
+   "clinic",
+   "doctors",
+   "health_post"
+  ],
+  "hospital": "amenity=hospital, or healthcare=hospital when amenity is missing",
+  "excluded_main": [
+   "pharmacy",
+   "dentist"
+  ],
+  "pharmacy_sensitivity": true
+ }
+}

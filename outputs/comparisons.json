@@ -1,0 +1,1815 @@
+{
+ "min_district_population": 5000,
+ "n_compared": 156,
+ "n_compared_herams": 63,
+ "pairs": {
+  "A|B|motorized|60": {
+   "spearman": 0.7943014904926832,
+   "spearman_ci95": [
+    0.6796091757360652,
+    0.8785084354015466
+   ],
+   "mean_change": 0.06755993589743592,
+   "median_abs_change": 0.010470000000000004,
+   "max_abs_change": 0.93604,
+   "max_change_signed": 0.93604,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 26,
+   "n_change_over_20pp": 16,
+   "max_rank_shift": 128,
+   "median_rank_shift": 11.0,
+   "top_k": 20,
+   "top_k_overlap": 13,
+   "n": 156
+  },
+  "A|AB|motorized|60": {
+   "spearman": 0.9691751035034616,
+   "spearman_ci95": [
+    0.9121441860093233,
+    0.9964388436390464
+   ],
+   "mean_change": -0.005509487179487179,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.27543999999999996,
+   "max_change_signed": -0.27543999999999996,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 1,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 125,
+   "median_rank_shift": 2.5,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "B|AB|motorized|60": {
+   "spearman": 0.8280024451387502,
+   "spearman_ci95": [
+    0.7229576994573657,
+    0.9027979107320437
+   ],
+   "mean_change": -0.07306942307692307,
+   "median_abs_change": 0.009570000000000006,
+   "max_abs_change": 0.93604,
+   "max_change_signed": -0.93604,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 26,
+   "n_change_over_20pp": 15,
+   "max_rank_shift": 121,
+   "median_rank_shift": 11.0,
+   "top_k": 20,
+   "top_k_overlap": 13,
+   "n": 156
+  },
+  "A|A_hosp|motorized|60": {
+   "spearman": 0.5923906372802746,
+   "spearman_ci95": [
+    0.45788507947377705,
+    0.7029718042176953
+   ],
+   "mean_change": 0.4673087179487179,
+   "median_abs_change": 0.48775,
+   "max_abs_change": 0.98985,
+   "max_change_signed": 0.98985,
+   "max_change_district": "Massingir",
+   "n_change_over_10pp": 124,
+   "n_change_over_20pp": 103,
+   "max_rank_shift": 116,
+   "median_rank_shift": 20.75,
+   "top_k": 20,
+   "top_k_overlap": 6,
+   "n": 156
+  },
+  "B|B_hosp|motorized|60": {
+   "spearman": 0.6417532521209215,
+   "spearman_ci95": [
+    0.514899868796325,
+    0.7474442993676624
+   ],
+   "mean_change": 0.39722762820512825,
+   "median_abs_change": 0.30398000000000003,
+   "max_abs_change": 0.99965,
+   "max_change_signed": 0.99965,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 106,
+   "n_change_over_20pp": 89,
+   "max_rank_shift": 124,
+   "median_rank_shift": 23.0,
+   "top_k": 20,
+   "top_k_overlap": 4,
+   "n": 156
+  },
+  "AB|AB_hosp|motorized|60": {
+   "spearman": 0.6726495052477544,
+   "spearman_ci95": [
+    0.5591440891885788,
+    0.7632313018807565
+   ],
+   "mean_change": 0.3811496794871795,
+   "median_abs_change": 0.28503,
+   "max_abs_change": 0.97567,
+   "max_change_signed": 0.97567,
+   "max_change_district": "Mavago",
+   "n_change_over_10pp": 110,
+   "n_change_over_20pp": 85,
+   "max_rank_shift": 103,
+   "median_rank_shift": 19.0,
+   "top_k": 20,
+   "top_k_overlap": 7,
+   "n": 156
+  },
+  "A_hosp|B_hosp|motorized|60": {
+   "spearman": 0.7327829578578545,
+   "spearman_ci95": [
+    0.6210669006366751,
+    0.8262553470642207
+   ],
+   "mean_change": -0.0025211538461538544,
+   "median_abs_change": 0.02754000000000001,
+   "max_abs_change": 0.99999,
+   "max_change_signed": 0.99999,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 54,
+   "n_change_over_20pp": 42,
+   "max_rank_shift": 132,
+   "median_rank_shift": 8.0,
+   "top_k": 20,
+   "top_k_overlap": 13,
+   "n": 156
+  },
+  "B|B_pharm|motorized|60": {
+   "spearman": 0.9995035918449944,
+   "spearman_ci95": [
+    0.9981503159182351,
+    0.9999905074353218
+   ],
+   "mean_change": -0.0005011538461538462,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.03619999999999998,
+   "max_change_signed": -0.03619999999999998,
+   "max_change_district": "Ilha De Mo\u00e7ambique",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 13,
+   "median_rank_shift": 0.0,
+   "top_k": 20,
+   "top_k_overlap": 20,
+   "n": 156
+  },
+  "A|A_cross|motorized|60": {
+   "spearman": 0.9989594304383992,
+   "spearman_ci95": [
+    0.99742886936282,
+    0.9995572160409919
+   ],
+   "mean_change": -0.0010247435897435902,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.029189999999999994,
+   "max_change_signed": -0.029189999999999994,
+   "max_change_district": "Mandimba",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 12,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "A|A_sea|motorized|60": {
+   "spearman": 0.9431482983641829,
+   "spearman_ci95": [
+    0.8588821017980874,
+    0.9981741375146032
+   ],
+   "mean_change": -0.004881346153846154,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.27486,
+   "max_change_signed": -0.27486,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 3,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 137,
+   "median_rank_shift": 3.0,
+   "top_k": 20,
+   "top_k_overlap": 18,
+   "n": 156
+  },
+  "AB|AB_sea|motorized|60": {
+   "spearman": 0.9428033386657727,
+   "spearman_ci95": [
+    0.8582007872941614,
+    0.9986688700043967
+   ],
+   "mean_change": -0.004023653846153847,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.27486,
+   "max_change_signed": -0.27486,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 2,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 138,
+   "median_rank_shift": 3.0,
+   "top_k": 20,
+   "top_k_overlap": 18,
+   "n": 156
+  },
+  "A_sea|published|motorized|60": {
+   "spearman": 0.9986288139081971,
+   "spearman_ci95": [
+    0.9968995303510526,
+    0.9992901271926714
+   ],
+   "mean_change": -0.001538910256410256,
+   "median_abs_change": 0.00012000000000000378,
+   "max_abs_change": 0.029189999999999994,
+   "max_change_signed": -0.029189999999999994,
+   "max_change_district": "Mandimba",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 12,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "A|published|motorized|60": {
+   "spearman": 0.9420089819290668,
+   "spearman_ci95": [
+    0.8577616692495177,
+    0.9966628622228422
+   ],
+   "mean_change": -0.0064202564102564105,
+   "median_abs_change": 0.0003550000000000085,
+   "max_abs_change": 0.27486,
+   "max_change_signed": -0.27486,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 3,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 137,
+   "median_rank_shift": 3.0,
+   "top_k": 20,
+   "top_k_overlap": 17,
+   "n": 156
+  },
+  "B|published|motorized|60": {
+   "spearman": 0.7504847518555362,
+   "spearman_ci95": [
+    0.6188720551312601,
+    0.8515982712624187
+   ],
+   "mean_change": -0.0739801923076923,
+   "median_abs_change": 0.013354999999999999,
+   "max_abs_change": 0.94263,
+   "max_change_signed": -0.94263,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 28,
+   "n_change_over_20pp": 16,
+   "max_rank_shift": 134,
+   "median_rank_shift": 13.0,
+   "top_k": 20,
+   "top_k_overlap": 12,
+   "n": 156
+  },
+  "AB|published|motorized|60": {
+   "spearman": 0.9188207277065801,
+   "spearman_ci95": [
+    0.8261848938279477,
+    0.9894124440724541
+   ],
+   "mean_change": -0.0009107692307692306,
+   "median_abs_change": 0.0009949999999999959,
+   "max_abs_change": 0.27486,
+   "max_change_signed": -0.27486,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 3,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 138,
+   "median_rank_shift": 2.0,
+   "top_k": 20,
+   "top_k_overlap": 18,
+   "n": 156
+  },
+  "A|B|walking|60": {
+   "spearman": 0.6854732671094723,
+   "spearman_ci95": [
+    0.5505290147446686,
+    0.7929266592935529
+   ],
+   "mean_change": 0.10232121794871796,
+   "median_abs_change": 0.05384,
+   "max_abs_change": 0.97183,
+   "max_change_signed": 0.97183,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 60,
+   "n_change_over_20pp": 30,
+   "max_rank_shift": 137,
+   "median_rank_shift": 20.0,
+   "top_k": 20,
+   "top_k_overlap": 9,
+   "n": 156
+  },
+  "A|AB|walking|60": {
+   "spearman": 0.9666450664601475,
+   "spearman_ci95": [
+    0.9106759740914164,
+    0.9942149009283121
+   ],
+   "mean_change": -0.018989166666666668,
+   "median_abs_change": 0.0015249999999999986,
+   "max_abs_change": 0.5574600000000001,
+   "max_change_signed": -0.5574600000000001,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 5,
+   "n_change_over_20pp": 2,
+   "max_rank_shift": 124,
+   "median_rank_shift": 4.0,
+   "top_k": 20,
+   "top_k_overlap": 16,
+   "n": 156
+  },
+  "B|AB|walking|60": {
+   "spearman": 0.7237777175533072,
+   "spearman_ci95": [
+    0.6023988380529013,
+    0.8238090266959822
+   ],
+   "mean_change": -0.12131038461538463,
+   "median_abs_change": 0.05283500000000002,
+   "max_abs_change": 0.97183,
+   "max_change_signed": -0.97183,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 61,
+   "n_change_over_20pp": 31,
+   "max_rank_shift": 136,
+   "median_rank_shift": 18.5,
+   "top_k": 20,
+   "top_k_overlap": 10,
+   "n": 156
+  },
+  "A|A_hosp|walking|60": {
+   "spearman": 0.40617137926945696,
+   "spearman_ci95": [
+    0.25471295274121175,
+    0.5441455813693176
+   ],
+   "mean_change": 0.3665778846153846,
+   "median_abs_change": 0.3465,
+   "max_abs_change": 0.94906,
+   "max_change_signed": 0.94906,
+   "max_change_district": "Marracuene",
+   "n_change_over_10pp": 148,
+   "n_change_over_20pp": 124,
+   "max_rank_shift": 100,
+   "median_rank_shift": 33.0,
+   "top_k": 20,
+   "top_k_overlap": 0,
+   "n": 156
+  },
+  "B|B_hosp|walking|60": {
+   "spearman": 0.5318843258063445,
+   "spearman_ci95": [
+    0.39228147489175413,
+    0.6452375489842416
+   ],
+   "mean_change": 0.2278525641025641,
+   "median_abs_change": 0.203285,
+   "max_abs_change": 0.75786,
+   "max_change_signed": 0.75786,
+   "max_change_district": "Maxixe",
+   "n_change_over_10pp": 110,
+   "n_change_over_20pp": 83,
+   "max_rank_shift": 98,
+   "median_rank_shift": 28.5,
+   "top_k": 20,
+   "top_k_overlap": 4,
+   "n": 156
+  },
+  "AB|AB_hosp|walking|60": {
+   "spearman": 0.5606363241480299,
+   "spearman_ci95": [
+    0.4313571641487179,
+    0.6699297123587934
+   ],
+   "mean_change": 0.31582858974358974,
+   "median_abs_change": 0.29285999999999995,
+   "max_abs_change": 0.79213,
+   "max_change_signed": 0.79213,
+   "max_change_district": "Dondo",
+   "n_change_over_10pp": 141,
+   "n_change_over_20pp": 113,
+   "max_rank_shift": 99,
+   "median_rank_shift": 27.0,
+   "top_k": 20,
+   "top_k_overlap": 3,
+   "n": 156
+  },
+  "A_hosp|B_hosp|walking|60": {
+   "spearman": 0.5534508617146661,
+   "spearman_ci95": [
+    0.41166728380068307,
+    0.6795258699280908
+   ],
+   "mean_change": -0.03640410256410257,
+   "median_abs_change": 9.500000000001174e-05,
+   "max_abs_change": 0.86858,
+   "max_change_signed": 0.86858,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 51,
+   "n_change_over_20pp": 33,
+   "max_rank_shift": 113,
+   "median_rank_shift": 3.5,
+   "top_k": 20,
+   "top_k_overlap": 13,
+   "n": 156
+  },
+  "B|B_pharm|walking|60": {
+   "spearman": 0.9681493426750958,
+   "spearman_ci95": [
+    0.9200765763823158,
+    0.999930441831903
+   ],
+   "mean_change": -0.006947500000000001,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.46302,
+   "max_change_signed": -0.46302,
+   "max_change_district": "Ilha De Mo\u00e7ambique",
+   "n_change_over_10pp": 3,
+   "n_change_over_20pp": 3,
+   "max_rank_shift": 103,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "A|A_cross|walking|60": {
+   "spearman": 0.9966999099113337,
+   "spearman_ci95": [
+    0.9923614318492616,
+    0.999143217583125
+   ],
+   "mean_change": -0.0034548076923076954,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.08531999999999995,
+   "max_change_signed": -0.08531999999999995,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 27,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "A|A_sea|walking|60": {
+   "spearman": 0.9999715509475114,
+   "spearman_ci95": [
+    0.9997976609367123,
+    1.0
+   ],
+   "mean_change": -0.0002955769230769222,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.024229999999999974,
+   "max_change_signed": -0.024229999999999974,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 3,
+   "median_rank_shift": 0.0,
+   "top_k": 20,
+   "top_k_overlap": 20,
+   "n": 156
+  },
+  "AB|AB_sea|walking|60": {
+   "spearman": 0.9999747119533435,
+   "spearman_ci95": [
+    0.9998355998684164,
+    1.0
+   ],
+   "mean_change": -0.00028948717948717946,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.024229999999999974,
+   "max_change_signed": -0.024229999999999974,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 2,
+   "median_rank_shift": 0.0,
+   "top_k": 20,
+   "top_k_overlap": 20,
+   "n": 156
+  },
+  "A_sea|published|walking|60": {
+   "spearman": 0.9955651088176256,
+   "spearman_ci95": [
+    0.9907799741159588,
+    0.997938678060903
+   ],
+   "mean_change": -0.01022692307692308,
+   "median_abs_change": 0.0049000000000000155,
+   "max_abs_change": 0.16314,
+   "max_change_signed": -0.16314,
+   "max_change_district": "Ilha De Mo\u00e7ambique",
+   "n_change_over_10pp": 1,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 26,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "A|published|walking|60": {
+   "spearman": 0.9955429817768013,
+   "spearman_ci95": [
+    0.9907302613228406,
+    0.9978946513133905
+   ],
+   "mean_change": -0.010522500000000002,
+   "median_abs_change": 0.00498000000000004,
+   "max_abs_change": 0.16343000000000002,
+   "max_change_signed": -0.16343000000000002,
+   "max_change_district": "Ilha De Mo\u00e7ambique",
+   "n_change_over_10pp": 1,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 26,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "B|published|walking|60": {
+   "spearman": 0.6664743608482322,
+   "spearman_ci95": [
+    0.525888454817428,
+    0.7773287600972355
+   ],
+   "mean_change": -0.11284371794871795,
+   "median_abs_change": 0.05523499999999999,
+   "max_abs_change": 0.97239,
+   "max_change_signed": -0.97239,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 63,
+   "n_change_over_20pp": 34,
+   "max_rank_shift": 137,
+   "median_rank_shift": 21.5,
+   "top_k": 20,
+   "top_k_overlap": 8,
+   "n": 156
+  },
+  "AB|published|walking|60": {
+   "spearman": 0.9639266014445794,
+   "spearman_ci95": [
+    0.9076144008577828,
+    0.9916380315186512
+   ],
+   "mean_change": 0.008466666666666666,
+   "median_abs_change": 0.0062500000000000056,
+   "max_abs_change": 0.55572,
+   "max_change_signed": 0.55572,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 6,
+   "n_change_over_20pp": 2,
+   "max_rank_shift": 124,
+   "median_rank_shift": 3.0,
+   "top_k": 20,
+   "top_k_overlap": 16,
+   "n": 156
+  },
+  "A|B|motorized|120": {
+   "spearman": 0.9258873865258981,
+   "spearman_ci95": [
+    0.8684060641711832,
+    0.9621331363901278
+   ],
+   "mean_change": 0.032365705128205136,
+   "median_abs_change": 0.0006799999999999992,
+   "max_abs_change": 0.81204,
+   "max_change_signed": 0.81204,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 9,
+   "n_change_over_20pp": 5,
+   "max_rank_shift": 94,
+   "median_rank_shift": 6.0,
+   "top_k": 20,
+   "top_k_overlap": 15,
+   "n": 156
+  },
+  "A|AB|motorized|120": {
+   "spearman": 0.9962592365034733,
+   "spearman_ci95": [
+    0.9910789020719408,
+    0.9989888962817136
+   ],
+   "mean_change": -0.0007857051282051282,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.028270000000000003,
+   "max_change_signed": -0.028270000000000003,
+   "max_change_district": "Mapai",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 26,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "B|AB|motorized|120": {
+   "spearman": 0.9311228207342989,
+   "spearman_ci95": [
+    0.8748213934805533,
+    0.9661443960464243
+   ],
+   "mean_change": -0.03315141025641026,
+   "median_abs_change": 0.0004100000000000004,
+   "max_abs_change": 0.81204,
+   "max_change_signed": -0.81204,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 10,
+   "n_change_over_20pp": 5,
+   "max_rank_shift": 94,
+   "median_rank_shift": 6.0,
+   "top_k": 20,
+   "top_k_overlap": 15,
+   "n": 156
+  },
+  "A|A_hosp|motorized|120": {
+   "spearman": 0.7308532313342575,
+   "spearman_ci95": [
+    0.6248728259052362,
+    0.8043350685657428
+   ],
+   "mean_change": 0.23344743589743588,
+   "median_abs_change": 0.068535,
+   "max_abs_change": 0.98958,
+   "max_change_signed": 0.98958,
+   "max_change_district": "Nipepe",
+   "n_change_over_10pp": 67,
+   "n_change_over_20pp": 56,
+   "max_rank_shift": 92,
+   "median_rank_shift": 20.0,
+   "top_k": 20,
+   "top_k_overlap": 6,
+   "n": 156
+  },
+  "B|B_hosp|motorized|120": {
+   "spearman": 0.7360657226501588,
+   "spearman_ci95": [
+    0.6354925045806377,
+    0.8148364781641125
+   ],
+   "mean_change": 0.23989378205128203,
+   "median_abs_change": 0.059045,
+   "max_abs_change": 1.0,
+   "max_change_signed": 1.0,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 64,
+   "n_change_over_20pp": 52,
+   "max_rank_shift": 136,
+   "median_rank_shift": 19.0,
+   "top_k": 20,
+   "top_k_overlap": 7,
+   "n": 156
+  },
+  "AB|AB_hosp|motorized|120": {
+   "spearman": 0.7804095078710753,
+   "spearman_ci95": [
+    0.6952860925371225,
+    0.8419179943963433
+   ],
+   "mean_change": 0.18957711538461539,
+   "median_abs_change": 0.04571,
+   "max_abs_change": 0.98958,
+   "max_change_signed": 0.98958,
+   "max_change_district": "Nipepe",
+   "n_change_over_10pp": 57,
+   "n_change_over_20pp": 43,
+   "max_rank_shift": 87,
+   "median_rank_shift": 19.0,
+   "top_k": 20,
+   "top_k_overlap": 9,
+   "n": 156
+  },
+  "A_hosp|B_hosp|motorized|120": {
+   "spearman": 0.8441837725750824,
+   "spearman_ci95": [
+    0.7532336071068579,
+    0.9144269493153647
+   ],
+   "mean_change": 0.03881205128205128,
+   "median_abs_change": 0.0138,
+   "max_abs_change": 1.0,
+   "max_change_signed": 1.0,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 49,
+   "n_change_over_20pp": 32,
+   "max_rank_shift": 140,
+   "median_rank_shift": 7.0,
+   "top_k": 20,
+   "top_k_overlap": 10,
+   "n": 156
+  },
+  "B|B_pharm|motorized|120": {
+   "spearman": 0.9999968259459873,
+   "spearman_ci95": [
+    0.9999523598451457,
+    1.0
+   ],
+   "mean_change": -2.7435897435897562e-05,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.0025300000000000045,
+   "max_change_signed": -0.0025300000000000045,
+   "max_change_district": "Mossuril",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 1,
+   "median_rank_shift": 0.0,
+   "top_k": 20,
+   "top_k_overlap": 20,
+   "n": 156
+  },
+  "A|A_cross|motorized|120": {
+   "spearman": 0.9935627031565532,
+   "spearman_ci95": [
+    0.9848494617438691,
+    0.9984701594697721
+   ],
+   "mean_change": -0.0010496153846153845,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.028870000000000007,
+   "max_change_signed": -0.028870000000000007,
+   "max_change_district": "Zumbu",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 34,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 20,
+   "n": 156
+  },
+  "A|A_sea|motorized|120": {
+   "spearman": 0.9203278783582239,
+   "spearman_ci95": [
+    0.829166757588036,
+    0.9835698660231144
+   ],
+   "mean_change": -0.003433717948717949,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.25073,
+   "max_change_signed": -0.25073,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 2,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 134,
+   "median_rank_shift": 4.5,
+   "top_k": 20,
+   "top_k_overlap": 17,
+   "n": 156
+  },
+  "AB|AB_sea|motorized|120": {
+   "spearman": 0.9169758113235558,
+   "spearman_ci95": [
+    0.8254039670691597,
+    0.9805821710899418
+   ],
+   "mean_change": -0.003431282051282051,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.25073,
+   "max_change_signed": -0.25073,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 2,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 133,
+   "median_rank_shift": 5.0,
+   "top_k": 20,
+   "top_k_overlap": 17,
+   "n": 156
+  },
+  "A_sea|published|motorized|120": {
+   "spearman": 0.9880544677786494,
+   "spearman_ci95": [
+    0.970633935948476,
+    0.9977556748324513
+   ],
+   "mean_change": -0.0011717948717948718,
+   "median_abs_change": 9.999999999999593e-06,
+   "max_abs_change": 0.02978000000000003,
+   "max_change_signed": -0.02978000000000003,
+   "max_change_district": "Zumbu",
+   "n_change_over_10pp": 0,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 60,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 20,
+   "n": 156
+  },
+  "A|published|motorized|120": {
+   "spearman": 0.909817882807722,
+   "spearman_ci95": [
+    0.8165589927192032,
+    0.9759040680978858
+   ],
+   "mean_change": -0.004605512820512821,
+   "median_abs_change": 5.9999999999999995e-05,
+   "max_abs_change": 0.25073,
+   "max_change_signed": -0.25073,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 2,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 134,
+   "median_rank_shift": 5.0,
+   "top_k": 20,
+   "top_k_overlap": 17,
+   "n": 156
+  },
+  "B|published|motorized|120": {
+   "spearman": 0.8481787217924597,
+   "spearman_ci95": [
+    0.7509336129220162,
+    0.9230966454424265
+   ],
+   "mean_change": -0.036971217948717945,
+   "median_abs_change": 0.001689999999999999,
+   "max_abs_change": 0.81404,
+   "max_change_signed": -0.81404,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 10,
+   "n_change_over_20pp": 6,
+   "max_rank_shift": 131,
+   "median_rank_shift": 10.0,
+   "top_k": 20,
+   "top_k_overlap": 13,
+   "n": 156
+  },
+  "AB|published|motorized|120": {
+   "spearman": 0.9032759039949871,
+   "spearman_ci95": [
+    0.8095249333961798,
+    0.9691656792762324
+   ],
+   "mean_change": -0.0038198076923076927,
+   "median_abs_change": 0.00013500000000000081,
+   "max_abs_change": 0.25073,
+   "max_change_signed": -0.25073,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 2,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 134,
+   "median_rank_shift": 4.75,
+   "top_k": 20,
+   "top_k_overlap": 17,
+   "n": 156
+  },
+  "A|B|walking|120": {
+   "spearman": 0.6417772087725103,
+   "spearman_ci95": [
+    0.5005428474493107,
+    0.7565175975270892
+   ],
+   "mean_change": 0.13890416666666666,
+   "median_abs_change": 0.06899999999999999,
+   "max_abs_change": 0.9131,
+   "max_change_signed": 0.9131,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 67,
+   "n_change_over_20pp": 46,
+   "max_rank_shift": 140,
+   "median_rank_shift": 20.5,
+   "top_k": 20,
+   "top_k_overlap": 10,
+   "n": 156
+  },
+  "A|AB|walking|120": {
+   "spearman": 0.9621592488338357,
+   "spearman_ci95": [
+    0.9107538804912094,
+    0.9905616892777632
+   ],
+   "mean_change": -0.022484999999999998,
+   "median_abs_change": 0.0004699999999999843,
+   "max_abs_change": 0.66777,
+   "max_change_signed": -0.66777,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 8,
+   "n_change_over_20pp": 2,
+   "max_rank_shift": 113,
+   "median_rank_shift": 4.0,
+   "top_k": 20,
+   "top_k_overlap": 16,
+   "n": 156
+  },
+  "B|AB|walking|120": {
+   "spearman": 0.6829169216842532,
+   "spearman_ci95": [
+    0.5479309864576131,
+    0.7897422518608189
+   ],
+   "mean_change": -0.16138916666666667,
+   "median_abs_change": 0.07294,
+   "max_abs_change": 0.9131,
+   "max_change_signed": -0.9131,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 69,
+   "n_change_over_20pp": 47,
+   "max_rank_shift": 140,
+   "median_rank_shift": 21.0,
+   "top_k": 20,
+   "top_k_overlap": 10,
+   "n": 156
+  },
+  "A|A_hosp|walking|120": {
+   "spearman": 0.4642379134594447,
+   "spearman_ci95": [
+    0.32437548892815793,
+    0.5974428569036171
+   ],
+   "mean_change": 0.5381682051282051,
+   "median_abs_change": 0.556405,
+   "max_abs_change": 0.99184,
+   "max_change_signed": 0.99184,
+   "max_change_district": "Marracuene",
+   "n_change_over_10pp": 148,
+   "n_change_over_20pp": 142,
+   "max_rank_shift": 103,
+   "median_rank_shift": 27.0,
+   "top_k": 20,
+   "top_k_overlap": 1,
+   "n": 156
+  },
+  "B|B_hosp|walking|120": {
+   "spearman": 0.49965422954367894,
+   "spearman_ci95": [
+    0.3619331901497133,
+    0.6200326499945923
+   ],
+   "mean_change": 0.36822897435897434,
+   "median_abs_change": 0.371425,
+   "max_abs_change": 0.9775299999999999,
+   "max_change_signed": 0.9775299999999999,
+   "max_change_district": "Inhassunge",
+   "n_change_over_10pp": 118,
+   "n_change_over_20pp": 108,
+   "max_rank_shift": 98,
+   "median_rank_shift": 29.75,
+   "top_k": 20,
+   "top_k_overlap": 4,
+   "n": 156
+  },
+  "AB|AB_hosp|walking|120": {
+   "spearman": 0.5847426628796374,
+   "spearman_ci95": [
+    0.4647379514457313,
+    0.6896095992263938
+   ],
+   "mean_change": 0.4843391025641027,
+   "median_abs_change": 0.49058499999999994,
+   "max_abs_change": 0.9775999999999999,
+   "max_change_signed": 0.9775999999999999,
+   "max_change_district": "Inhassunge",
+   "n_change_over_10pp": 140,
+   "n_change_over_20pp": 133,
+   "max_rank_shift": 97,
+   "median_rank_shift": 28.5,
+   "top_k": 20,
+   "top_k_overlap": 6,
+   "n": 156
+  },
+  "A_hosp|B_hosp|walking|120": {
+   "spearman": 0.5539736619043003,
+   "spearman_ci95": [
+    0.4127838074450826,
+    0.6825571043309994
+   ],
+   "mean_change": -0.031035064102564108,
+   "median_abs_change": 0.007210000000000009,
+   "max_abs_change": 0.97891,
+   "max_change_signed": 0.97891,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 53,
+   "n_change_over_20pp": 34,
+   "max_rank_shift": 114,
+   "median_rank_shift": 4.0,
+   "top_k": 20,
+   "top_k_overlap": 12,
+   "n": 156
+  },
+  "B|B_pharm|walking|120": {
+   "spearman": 0.9830435607258013,
+   "spearman_ci95": [
+    0.9431106651869053,
+    0.9999969175370014
+   ],
+   "mean_change": -0.0046412820512820524,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.68336,
+   "max_change_signed": -0.68336,
+   "max_change_district": "Ilha De Mo\u00e7ambique",
+   "n_change_over_10pp": 1,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 103,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "A|A_cross|walking|120": {
+   "spearman": 0.9920306634527996,
+   "spearman_ci95": [
+    0.9819860913102039,
+    0.9975304669742191
+   ],
+   "mean_change": -0.007522051282051281,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.21987,
+   "max_change_signed": -0.21987,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 3,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 40,
+   "median_rank_shift": 1.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "A|A_sea|walking|120": {
+   "spearman": 0.9985774686845537,
+   "spearman_ci95": [
+    0.9942804208605649,
+    0.9999810297082279
+   ],
+   "mean_change": -0.0013661538461538455,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.15872999999999998,
+   "max_change_signed": -0.15872999999999998,
+   "max_change_district": "Ilha De Mo\u00e7ambique",
+   "n_change_over_10pp": 1,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 28,
+   "median_rank_shift": 0.0,
+   "top_k": 20,
+   "top_k_overlap": 20,
+   "n": 156
+  },
+  "AB|AB_sea|walking|120": {
+   "spearman": 0.9980747346905161,
+   "spearman_ci95": [
+    0.9926806021430828,
+    0.9999439191978864
+   ],
+   "mean_change": -0.0013672435897435886,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.15872999999999998,
+   "max_change_signed": -0.15872999999999998,
+   "max_change_district": "Ilha De Mo\u00e7ambique",
+   "n_change_over_10pp": 1,
+   "n_change_over_20pp": 0,
+   "max_rank_shift": 32,
+   "median_rank_shift": 0.0,
+   "top_k": 20,
+   "top_k_overlap": 20,
+   "n": 156
+  },
+  "A_sea|published|walking|120": {
+   "spearman": 0.9884174339115659,
+   "spearman_ci95": [
+    0.9769562318448842,
+    0.9956528452753474
+   ],
+   "mean_change": -0.014016153846153845,
+   "median_abs_change": 0.004195000000000004,
+   "max_abs_change": 0.22309,
+   "max_change_signed": -0.22309,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 5,
+   "n_change_over_20pp": 2,
+   "max_rank_shift": 43,
+   "median_rank_shift": 2.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "A|published|walking|120": {
+   "spearman": 0.9871624451732722,
+   "spearman_ci95": [
+    0.9749588556281064,
+    0.9945119115636056
+   ],
+   "mean_change": -0.015382307692307688,
+   "median_abs_change": 0.004600000000000021,
+   "max_abs_change": 0.22309,
+   "max_change_signed": -0.22309,
+   "max_change_district": "Chifunde",
+   "n_change_over_10pp": 6,
+   "n_change_over_20pp": 2,
+   "max_rank_shift": 43,
+   "median_rank_shift": 3.0,
+   "top_k": 20,
+   "top_k_overlap": 19,
+   "n": 156
+  },
+  "B|published|walking|120": {
+   "spearman": 0.6143034958616898,
+   "spearman_ci95": [
+    0.468453723252411,
+    0.7358550981847578
+   ],
+   "mean_change": -0.15428647435897438,
+   "median_abs_change": 0.07319000000000003,
+   "max_abs_change": 0.99561,
+   "max_change_signed": -0.99561,
+   "max_change_district": "Ilha De Mo\u00e7ambique",
+   "n_change_over_10pp": 69,
+   "n_change_over_20pp": 48,
+   "max_rank_shift": 140,
+   "median_rank_shift": 22.5,
+   "top_k": 20,
+   "top_k_overlap": 9,
+   "n": 156
+  },
+  "AB|published|walking|120": {
+   "spearman": 0.9520875599673393,
+   "spearman_ci95": [
+    0.8999819062840347,
+    0.9826431117836133
+   ],
+   "mean_change": 0.007102692307692309,
+   "median_abs_change": 0.00661500000000001,
+   "max_abs_change": 0.66735,
+   "max_change_signed": 0.66735,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 10,
+   "n_change_over_20pp": 4,
+   "max_rank_shift": 113,
+   "median_rank_shift": 2.0,
+   "top_k": 20,
+   "top_k_overlap": 16,
+   "n": 156
+  }
+ },
+ "herams": {
+  "H_all|H_func|motorized|60": {
+   "spearman": 0.9564570331253,
+   "spearman_ci95": [
+    0.8538987867918415,
+    1.0
+   ],
+   "mean_change": 0.00458984126984127,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.24934,
+   "max_change_signed": 0.24934,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 1,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 41,
+   "median_rank_shift": 1.0,
+   "top_k": 10,
+   "top_k_overlap": 9,
+   "n": 63
+  },
+  "H_all|H_fully|motorized|60": {
+   "spearman": 0.741478636581853,
+   "spearman_ci95": [
+    0.49581671763993806,
+    0.9356965423386969
+   ],
+   "mean_change": 0.05158603174603176,
+   "median_abs_change": 0.000559999999999998,
+   "max_abs_change": 0.9475600000000001,
+   "max_change_signed": 0.9475600000000001,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 6,
+   "n_change_over_20pp": 4,
+   "max_rank_shift": 57,
+   "median_rank_shift": 5.0,
+   "top_k": 10,
+   "top_k_overlap": 6,
+   "n": 63
+  },
+  "A|H_all|motorized|60": {
+   "spearman": 0.8035624285667445,
+   "spearman_ci95": [
+    0.5931633325654471,
+    0.9439050989196749
+   ],
+   "mean_change": 0.006036825396825396,
+   "median_abs_change": 0.00884,
+   "max_abs_change": 0.38678999999999997,
+   "max_change_signed": 0.38678999999999997,
+   "max_change_district": "Chinde",
+   "n_change_over_10pp": 7,
+   "n_change_over_20pp": 5,
+   "max_rank_shift": 56,
+   "median_rank_shift": 4.0,
+   "top_k": 10,
+   "top_k_overlap": 6,
+   "n": 63
+  },
+  "H_all|H_func|walking|60": {
+   "spearman": 0.983822576386722,
+   "spearman_ci95": [
+    0.9410001503898441,
+    0.9999999999999998
+   ],
+   "mean_change": 0.00838031746031746,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.21909999999999996,
+   "max_change_signed": 0.21909999999999996,
+   "max_change_district": "Quissanga",
+   "n_change_over_10pp": 2,
+   "n_change_over_20pp": 2,
+   "max_rank_shift": 25,
+   "median_rank_shift": 1.0,
+   "top_k": 10,
+   "top_k_overlap": 10,
+   "n": 63
+  },
+  "H_all|H_fully|walking|60": {
+   "spearman": 0.652135822425197,
+   "spearman_ci95": [
+    0.4082100358042682,
+    0.8513322221948479
+   ],
+   "mean_change": 0.08760095238095236,
+   "median_abs_change": 0.000520000000000076,
+   "max_abs_change": 0.6846,
+   "max_change_signed": 0.6846,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 12,
+   "n_change_over_20pp": 10,
+   "max_rank_shift": 51,
+   "median_rank_shift": 8.0,
+   "top_k": 10,
+   "top_k_overlap": 6,
+   "n": 63
+  },
+  "A|H_all|walking|60": {
+   "spearman": 0.6653545669950007,
+   "spearman_ci95": [
+    0.4261088479430596,
+    0.8248755540749781
+   ],
+   "mean_change": 0.0073106349206349215,
+   "median_abs_change": 0.05237999999999998,
+   "max_abs_change": 0.53722,
+   "max_change_signed": -0.53722,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 21,
+   "n_change_over_20pp": 13,
+   "max_rank_shift": 49,
+   "median_rank_shift": 5.0,
+   "top_k": 10,
+   "top_k_overlap": 3,
+   "n": 63
+  },
+  "H_all|H_func|motorized|120": {
+   "spearman": 0.9429648605539173,
+   "spearman_ci95": [
+    0.8315236370279513,
+    0.9999511493231519
+   ],
+   "mean_change": 0.004171746031746032,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.24935000000000002,
+   "max_change_signed": 0.24935000000000002,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 1,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 43,
+   "median_rank_shift": 1.0,
+   "top_k": 10,
+   "top_k_overlap": 9,
+   "n": 63
+  },
+  "H_all|H_fully|motorized|120": {
+   "spearman": 0.8860263908357096,
+   "spearman_ci95": [
+    0.7358384911038774,
+    0.9882840495780113
+   ],
+   "mean_change": 0.017500000000000005,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.43185,
+   "max_change_signed": 0.43185,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 3,
+   "n_change_over_20pp": 3,
+   "max_rank_shift": 44,
+   "median_rank_shift": 3.0,
+   "top_k": 10,
+   "top_k_overlap": 8,
+   "n": 63
+  },
+  "A|H_all|motorized|120": {
+   "spearman": 0.8990850697105605,
+   "spearman_ci95": [
+    0.7813560317879077,
+    0.9674263470133427
+   ],
+   "mean_change": -0.00019984126984127053,
+   "median_abs_change": 0.0009399999999999994,
+   "max_abs_change": 0.24935000000000002,
+   "max_change_signed": -0.24935000000000002,
+   "max_change_district": "Ibo",
+   "n_change_over_10pp": 2,
+   "n_change_over_20pp": 1,
+   "max_rank_shift": 43,
+   "median_rank_shift": 3.0,
+   "top_k": 10,
+   "top_k_overlap": 7,
+   "n": 63
+  },
+  "H_all|H_func|walking|120": {
+   "spearman": 0.9820931349015842,
+   "spearman_ci95": [
+    0.9491106278245235,
+    0.9992792649939445
+   ],
+   "mean_change": 0.01068952380952381,
+   "median_abs_change": 0.0,
+   "max_abs_change": 0.278,
+   "max_change_signed": 0.278,
+   "max_change_district": "Quissanga",
+   "n_change_over_10pp": 2,
+   "n_change_over_20pp": 2,
+   "max_rank_shift": 18,
+   "median_rank_shift": 1.0,
+   "top_k": 10,
+   "top_k_overlap": 9,
+   "n": 63
+  },
+  "H_all|H_fully|walking|120": {
+   "spearman": 0.6397580384286803,
+   "spearman_ci95": [
+    0.4165444879323403,
+    0.8301513420103717
+   ],
+   "mean_change": 0.10888904761904761,
+   "median_abs_change": 0.0034399999999999986,
+   "max_abs_change": 0.84587,
+   "max_change_signed": 0.84587,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 16,
+   "n_change_over_20pp": 10,
+   "max_rank_shift": 49,
+   "median_rank_shift": 8.0,
+   "top_k": 10,
+   "top_k_overlap": 6,
+   "n": 63
+  },
+  "A|H_all|walking|120": {
+   "spearman": 0.6427517016275566,
+   "spearman_ci95": [
+    0.42328387948649954,
+    0.7943569092208698
+   ],
+   "mean_change": 0.012723809523809533,
+   "median_abs_change": 0.08204,
+   "max_abs_change": 0.66972,
+   "max_change_signed": -0.66972,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 28,
+   "n_change_over_20pp": 14,
+   "max_rank_shift": 50,
+   "median_rank_shift": 7.0,
+   "top_k": 10,
+   "top_k_overlap": 3,
+   "n": 63
+  }
+ },
+ "modes": {
+  "A|60": {
+   "spearman": 0.6122258872815328,
+   "spearman_ci95": [
+    0.47605183534431955,
+    0.7299464179094101
+   ],
+   "mean_change": 0.43210525641025643,
+   "median_abs_change": 0.4691850000000001,
+   "max_abs_change": 0.83964,
+   "max_change_signed": 0.83964,
+   "max_change_district": "Derre",
+   "n_change_over_10pp": 141,
+   "n_change_over_20pp": 136,
+   "max_rank_shift": 128,
+   "median_rank_shift": 19.5,
+   "top_k": 20,
+   "top_k_overlap": 6,
+   "n": 156
+  },
+  "B|60": {
+   "spearman": 0.6873811438989328,
+   "spearman_ci95": [
+    0.5686140621178314,
+    0.7797900780576501
+   ],
+   "mean_change": 0.46686653846153847,
+   "median_abs_change": 0.50913,
+   "max_abs_change": 0.99599,
+   "max_change_signed": 0.99599,
+   "max_change_district": "Cidade De Lichinga",
+   "n_change_over_10pp": 138,
+   "n_change_over_20pp": 132,
+   "max_rank_shift": 131,
+   "median_rank_shift": 17.0,
+   "top_k": 20,
+   "top_k_overlap": 12,
+   "n": 156
+  },
+  "AB|60": {
+   "spearman": 0.624348671280693,
+   "spearman_ci95": [
+    0.48329664143967055,
+    0.7424579687332677
+   ],
+   "mean_change": 0.4186255769230769,
+   "median_abs_change": 0.461165,
+   "max_abs_change": 0.8436600000000001,
+   "max_change_signed": 0.8436600000000001,
+   "max_change_district": "Derre",
+   "n_change_over_10pp": 140,
+   "n_change_over_20pp": 132,
+   "max_rank_shift": 130,
+   "median_rank_shift": 18.0,
+   "top_k": 20,
+   "top_k_overlap": 7,
+   "n": 156
+  },
+  "A|120": {
+   "spearman": 0.4861295073819846,
+   "spearman_ci95": [
+    0.3390802050023713,
+    0.6184429766762366
+   ],
+   "mean_change": 0.2800430769230769,
+   "median_abs_change": 0.27586,
+   "max_abs_change": 0.82305,
+   "max_change_signed": 0.82305,
+   "max_change_district": "Macomia",
+   "n_change_over_10pp": 126,
+   "n_change_over_20pp": 102,
+   "max_rank_shift": 137,
+   "median_rank_shift": 24.75,
+   "top_k": 20,
+   "top_k_overlap": 7,
+   "n": 156
+  },
+  "B|120": {
+   "spearman": 0.5571773734707938,
+   "spearman_ci95": [
+    0.416872840411844,
+    0.6802045426537179
+   ],
+   "mean_change": 0.3865815384615385,
+   "median_abs_change": 0.37922500000000003,
+   "max_abs_change": 0.99762,
+   "max_change_signed": 0.99762,
+   "max_change_district": "Marara",
+   "n_change_over_10pp": 133,
+   "n_change_over_20pp": 115,
+   "max_rank_shift": 131,
+   "median_rank_shift": 20.0,
+   "top_k": 20,
+   "top_k_overlap": 13,
+   "n": 156
+  },
+  "AB|120": {
+   "spearman": 0.5196028318817333,
+   "spearman_ci95": [
+    0.3719612017091801,
+    0.6529397027435184
+   ],
+   "mean_change": 0.258343782051282,
+   "median_abs_change": 0.26656,
+   "max_abs_change": 0.76818,
+   "max_change_signed": 0.76818,
+   "max_change_district": "Lalaua",
+   "n_change_over_10pp": 124,
+   "n_change_over_20pp": 96,
+   "max_rank_shift": 138,
+   "median_rank_shift": 23.25,
+   "top_k": 20,
+   "top_k_overlap": 7,
+   "n": 156
+  }
+ },
+ "population_layer": {
+  "A|motorized|60": {
+   "spearman": 0.8005243419399717,
+   "spearman_ci95": [
+    0.7021287440564321,
+    0.87232438826082
+   ],
+   "mean_change": 0.10320782051282051,
+   "median_abs_change": 0.073225,
+   "max_abs_change": 0.5684899999999999,
+   "max_change_signed": 0.5684899999999999,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 60,
+   "n_change_over_20pp": 26,
+   "max_rank_shift": 110,
+   "median_rank_shift": 11.5,
+   "top_k": 20,
+   "top_k_overlap": 9,
+   "n": 156
+  },
+  "B|motorized|60": {
+   "spearman": 0.8308009224101474,
+   "spearman_ci95": [
+    0.7443660917316818,
+    0.8974600272459616
+   ],
+   "mean_change": 0.09823141025641026,
+   "median_abs_change": 0.07141499999999999,
+   "max_abs_change": 0.59648,
+   "max_change_signed": 0.59648,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 57,
+   "n_change_over_20pp": 28,
+   "max_rank_shift": 105,
+   "median_rank_shift": 12.0,
+   "top_k": 20,
+   "top_k_overlap": 15,
+   "n": 156
+  },
+  "AB|motorized|60": {
+   "spearman": 0.7999993726915449,
+   "spearman_ci95": [
+    0.7045421240135851,
+    0.872396798074884
+   ],
+   "mean_change": 0.10219756410256409,
+   "median_abs_change": 0.07429999999999999,
+   "max_abs_change": 0.5684899999999999,
+   "max_change_signed": 0.5684899999999999,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 58,
+   "n_change_over_20pp": 27,
+   "max_rank_shift": 106,
+   "median_rank_shift": 13.0,
+   "top_k": 20,
+   "top_k_overlap": 9,
+   "n": 156
+  },
+  "A|walking|60": {
+   "spearman": 0.7546079562516792,
+   "spearman_ci95": [
+    0.657349892858343,
+    0.8294427081671408
+   ],
+   "mean_change": 0.13302365384615386,
+   "median_abs_change": 0.10450000000000004,
+   "max_abs_change": 0.64247,
+   "max_change_signed": 0.64247,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 81,
+   "n_change_over_20pp": 39,
+   "max_rank_shift": 117,
+   "median_rank_shift": 18.0,
+   "top_k": 20,
+   "top_k_overlap": 9,
+   "n": 156
+  },
+  "B|walking|60": {
+   "spearman": 0.8145324524543525,
+   "spearman_ci95": [
+    0.7316766775346025,
+    0.8798419916738217
+   ],
+   "mean_change": 0.10921910256410257,
+   "median_abs_change": 0.08061000000000001,
+   "max_abs_change": 0.64579,
+   "max_change_signed": 0.64579,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 64,
+   "n_change_over_20pp": 29,
+   "max_rank_shift": 101,
+   "median_rank_shift": 15.0,
+   "top_k": 20,
+   "top_k_overlap": 15,
+   "n": 156
+  },
+  "AB|walking|60": {
+   "spearman": 0.7535300532629482,
+   "spearman_ci95": [
+    0.6574977808450057,
+    0.828923791960664
+   ],
+   "mean_change": 0.13539128205128206,
+   "median_abs_change": 0.10629,
+   "max_abs_change": 0.64247,
+   "max_change_signed": 0.64247,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 82,
+   "n_change_over_20pp": 40,
+   "max_rank_shift": 119,
+   "median_rank_shift": 17.5,
+   "top_k": 20,
+   "top_k_overlap": 11,
+   "n": 156
+  },
+  "A|motorized|120": {
+   "spearman": 0.8638080841976121,
+   "spearman_ci95": [
+    0.7955159305043349,
+    0.9115485473088601
+   ],
+   "mean_change": 0.04132134615384616,
+   "median_abs_change": 0.014785,
+   "max_abs_change": 0.36941,
+   "max_change_signed": 0.36941,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 23,
+   "n_change_over_20pp": 8,
+   "max_rank_shift": 84,
+   "median_rank_shift": 11.5,
+   "top_k": 20,
+   "top_k_overlap": 10,
+   "n": 156
+  },
+  "B|motorized|120": {
+   "spearman": 0.8802220378835726,
+   "spearman_ci95": [
+    0.814405746313678,
+    0.9266957363448752
+   ],
+   "mean_change": 0.04600467948717949,
+   "median_abs_change": 0.015404999999999999,
+   "max_abs_change": 0.43678000000000006,
+   "max_change_signed": 0.43678000000000006,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 30,
+   "n_change_over_20pp": 10,
+   "max_rank_shift": 82,
+   "median_rank_shift": 9.25,
+   "top_k": 20,
+   "top_k_overlap": 13,
+   "n": 156
+  },
+  "AB|motorized|120": {
+   "spearman": 0.8623584448807726,
+   "spearman_ci95": [
+    0.7933762608531237,
+    0.9092719895672898
+   ],
+   "mean_change": 0.04022179487179487,
+   "median_abs_change": 0.014419999999999999,
+   "max_abs_change": 0.36941,
+   "max_change_signed": 0.36941,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 23,
+   "n_change_over_20pp": 7,
+   "max_rank_shift": 86,
+   "median_rank_shift": 11.5,
+   "top_k": 20,
+   "top_k_overlap": 9,
+   "n": 156
+  },
+  "A|walking|120": {
+   "spearman": 0.8405121112735606,
+   "spearman_ci95": [
+    0.7601945609649211,
+    0.8961710416309527
+   ],
+   "mean_change": 0.09754852564102566,
+   "median_abs_change": 0.08284500000000003,
+   "max_abs_change": 0.59221,
+   "max_change_signed": 0.59221,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 64,
+   "n_change_over_20pp": 27,
+   "max_rank_shift": 109,
+   "median_rank_shift": 12.0,
+   "top_k": 20,
+   "top_k_overlap": 13,
+   "n": 156
+  },
+  "B|walking|120": {
+   "spearman": 0.875205472593547,
+   "spearman_ci95": [
+    0.8081789229179566,
+    0.9241886598516905
+   ],
+   "mean_change": 0.08264858974358975,
+   "median_abs_change": 0.05672000000000002,
+   "max_abs_change": 0.6194299999999999,
+   "max_change_signed": 0.6194299999999999,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 55,
+   "n_change_over_20pp": 25,
+   "max_rank_shift": 100,
+   "median_rank_shift": 11.5,
+   "top_k": 20,
+   "top_k_overlap": 15,
+   "n": 156
+  },
+  "AB|walking|120": {
+   "spearman": 0.8314402501209192,
+   "spearman_ci95": [
+    0.7507064916136224,
+    0.8902140444432146
+   ],
+   "mean_change": 0.0974800641025641,
+   "median_abs_change": 0.07897,
+   "max_abs_change": 0.59221,
+   "max_change_signed": 0.59221,
+   "max_change_district": "Mecula",
+   "n_change_over_10pp": 64,
+   "n_change_over_20pp": 27,
+   "max_rank_shift": 110,
+   "median_rank_shift": 13.0,
+   "top_k": 20,
+   "top_k_overlap": 12,
+   "n": 156
+  }
+ },
+ "published_cells": {
+  "A|motorized": {
+   "spearman_every_7th_cell": 0.996802790917727,
+   "median_diff_min": 0.07792132849132827,
+   "p05_diff_min": -0.046938498450774795,
+   "p95_diff_min": 0.9188010954910952,
+   "n_cells": 964495
+  },
+  "A|walking": {
+   "spearman_every_7th_cell": 0.9767500305565576,
+   "median_diff_min": 0.8161915477134016,
+   "p05_diff_min": 0.007002822376941263,
+   "p95_diff_min": 11.351911444271211,
+   "n_cells": 964495
+  },
+  "B|motorized": {
+   "spearman_every_7th_cell": 0.8875297752315522,
+   "median_diff_min": 0.2706859125309933,
+   "p05_diff_min": -8.099134777899437,
+   "p95_diff_min": 123.12963920350212,
+   "n_cells": 964468
+  },
+  "B|walking": {
+   "spearman_every_7th_cell": 0.650003815600544,
+   "median_diff_min": 1.629896067116448,
+   "p05_diff_min": -56.97309110561319,
+   "p95_diff_min": 796.5832853451188,
+   "n_cells": 964468
+  },
+  "AB|motorized": {
+   "spearman_every_7th_cell": 0.9866283844509267,
+   "median_diff_min": 0.06057147983949562,
+   "p05_diff_min": -8.148977138550151,
+   "p95_diff_min": 0.7764434738649806,
+   "n_cells": 964495
+  },
+  "AB|walking": {
+   "spearman_every_7th_cell": 0.9402142830251351,
+   "median_diff_min": 0.7264140850141416,
+   "p05_diff_min": -56.969796403620556,
+   "p95_diff_min": 4.372529220793397,
+   "n_cells": 964495
+  },
+  "A_sea|motorized": {
+   "spearman_every_7th_cell": 0.997624964757776,
+   "median_diff_min": 0.07719834128805303,
+   "p05_diff_min": -0.04719922561649028,
+   "p95_diff_min": 0.8135131858784505,
+   "n_cells": 964622
+  },
+  "A_sea|walking": {
+   "spearman_every_7th_cell": 0.9767073953667839,
+   "median_diff_min": 0.8150926872818474,
+   "p05_diff_min": 0.006579611752998488,
+   "p95_diff_min": 11.07555534283002,
+   "n_cells": 964622
+  }
+ },
+ "drop10": {
+  "A|motorized": {
+   "national_share_over_60_min": 0.07641366678631244,
+   "national_share_over_60_max": 0.08138703867370509,
+   "district_max_abs_change_median": 0.17047,
+   "district_max_abs_change_max": 0.22564,
+   "runs": 20,
+   "share_dropped": 0.1
+  },
+  "A|walking": {
+   "national_share_over_60_min": 0.4848707225856328,
+   "national_share_over_60_max": 0.4940755536541557,
+   "district_max_abs_change_median": 0.42705,
+   "district_max_abs_change_max": 0.7186,
+   "runs": 20,
+   "share_dropped": 0.1
+  },
+  "B|motorized": {
+   "national_share_over_60_min": 0.1158508893421476,
+   "national_share_over_60_max": 0.12460551408558938,
+   "district_max_abs_change_median": 0.28779,
+   "district_max_abs_change_max": 0.6718899999999999,
+   "runs": 20,
+   "share_dropped": 0.1
+  },
+  "B|walking": {
+   "national_share_over_60_min": 0.5674633791817356,
+   "national_share_over_60_max": 0.581278884753332,
+   "district_max_abs_change_median": 0.38544500000000004,
+   "district_max_abs_change_max": 0.63069,
+   "runs": 20,
+   "share_dropped": 0.1
+  }
+ }
+}

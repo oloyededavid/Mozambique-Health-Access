@@ -1,0 +1,107 @@
+{
+ "maina/ssa_mfl.xlsx": {
+  "url": "https://ndownloader.figshare.com/files/14379593",
+  "note": "Maina et al. (2019) public-sector health facilities, sub-Saharan Africa (figshare 7725374, file '00 SSA MFL (130219).xlsx'), CC0",
+  "bytes": 5495174,
+  "sha256": "6ab31b0d2601e0cd53e6360c5f6f9b415b2f6e2895b7a687b35f2ddedc3950b1",
+  "accessed": "2026-11-19"
+ },
+ "osm/health_facilities.parquet": {
+  "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/MOZ/_layers/osm/health_facilities.parquet",
+  "note": "HOT OpenStreetMap export, health facilities of Mozambique (HDX hotosm_moz_health_facilities), ODbL",
+  "bytes": 145838,
+  "sha256": "ecf4c723bfceae4c79c1e3b6534ef2b8b90eddec463b2f65f01f486a893320e8",
+  "accessed": "2026-11-19"
+ },
+ "herams/moz_herams_2022-2024_by-qtr.xlsx": {
+  "url": "https://data.humdata.org/dataset/0dd449f0-558d-4e30-9f7b-cedbeef8949e/resource/2aeb63f8-f5d1-4860-a9dd-f2df437d7e8c/download/moz_herams_2022-2024_by-qtr.xlsx",
+  "note": "WHO HeRAMS Mozambique 2022-2024 by quarter (HDX 'Mozambique: Health Facilities'), CC BY",
+  "bytes": 1250123,
+  "sha256": "b3b6d0dc8333c9c6fa8cf27e2102471725112bd0e4371f5385224b3e348c18c1",
+  "accessed": "2026-11-19"
+ },
+ "friction/motorized_2020.tif": {
+  "url": "https://data.malariaatlas.org/geoserver/Accessibility/wcs?service=WCS&version=2.0.1&request=GetCoverage&subset=Long(29.2,41.9)&subset=Lat(-27.9,-9.4)&format=image/tiff&coverageId=Accessibility__202001_Global_Motorized_Friction_Surface",
+  "note": "Malaria Atlas Project motorized friction surface 2020 (Weiss et al., 2020), minutes per metre",
+  "bytes": 15729164,
+  "sha256": "c626aa3fb826787c6913fb02dc4b8f2f34ae72522db83573af20cdedfdd7e7df",
+  "accessed": "2026-11-19"
+ },
+ "friction/walking_2020.tif": {
+  "url": "https://data.malariaatlas.org/geoserver/Accessibility/wcs?service=WCS&version=2.0.1&request=GetCoverage&subset=Long(29.2,41.9)&subset=Lat(-27.9,-9.4)&format=image/tiff&coverageId=Accessibility__202001_Global_Walking_Only_Friction_Surface",
+  "note": "Malaria Atlas Project walking-only friction surface 2020 (Weiss et al., 2020), minutes per metre",
+  "bytes": 15729164,
+  "sha256": "89727df31d70755b2b4b7e09929803e2c4e98337ba47341fe7b181e5eaf13101",
+  "accessed": "2026-11-19"
+ },
+ "mapwcs/tt_health_motorized_2020.tif": {
+  "url": "https://data.malariaatlas.org/geoserver/Accessibility/wcs?service=WCS&version=2.0.1&request=GetCoverage&subset=Long(29.2,41.9)&subset=Lat(-27.9,-9.4)&format=image/tiff&coverageId=Accessibility__202001_Global_Motorized_Travel_Time_to_Healthcare",
+  "note": "Malaria Atlas Project published motorized travel time to healthcare 2020 (Weiss et al., 2020)",
+  "bytes": 15729164,
+  "sha256": "80290bec3a57c307fc5b336d6d3cf5c8b4b76f1e76414e0af77f7b734c5dcc92",
+  "accessed": "2026-11-19"
+ },
+ "mapwcs/tt_health_walking_2020.tif": {
+  "url": "https://data.malariaatlas.org/geoserver/Accessibility/wcs?service=WCS&version=2.0.1&request=GetCoverage&subset=Long(29.2,41.9)&subset=Lat(-27.9,-9.4)&format=image/tiff&coverageId=Accessibility__202001_Global_Walking_Only_Travel_Time_To_Healthcare",
+  "note": "Malaria Atlas Project published walking-only travel time to healthcare 2020 (Weiss et al., 2020)",
+  "bytes": 15729164,
+  "sha256": "ee95c7b82c97bffce7275cb40f04ecdb6d2abf3cdca06579c4de8bbd0997c666",
+  "accessed": "2026-11-19"
+ },
+ "worldpop/moz_pop_2020_CN_100m_R2025A_v1.tif": {
+  "url": "https://data.worldpop.org/GIS/Population/Global_2015_2030/R2025A/2020/MOZ/v1/100m/constrained/moz_pop_2020_CN_100m_R2025A_v1.tif",
+  "note": "WorldPop Global2 R2025A v1, Mozambique 2020, constrained, 100 m (doi:10.5258/SOTON/WP00839)",
+  "bytes": 90911323,
+  "sha256": "3ba7dea20afe2a8b23a0313f9672cff109d4fd1ea70e4d5bf8b04b728c12eddd",
+  "accessed": "2026-11-19"
+ },
+ "worldpop/moz_ppp_2020.tif": {
+  "url": "https://data.worldpop.org/GIS/Population/Global_2000_2020/2020/MOZ/moz_ppp_2020.tif",
+  "note": "WorldPop Global 2000-2020, Mozambique 2020, unconstrained, 100 m",
+  "bytes": 447269933,
+  "sha256": "6b99b086320c15e0ab2baa0305ee1f6687ce7477bab6ee8404106a5d4b580c43",
+  "accessed": "2026-11-19"
+ },
+ "boundaries/moz_ADM0.geojson": {
+  "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/MOZ/ADM0/geoBoundaries-MOZ-ADM0.geojson",
+  "note": "geoBoundaries gbOpen MOZ ADM0 (commit 9469f09)",
+  "bytes": 3393326,
+  "sha256": "54a782b09144b9715c1a2cbc251e72f904ec60ab98fe522daf5e200f34167960",
+  "accessed": "2026-11-19"
+ },
+ "boundaries/moz_ADM1.geojson": {
+  "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/MOZ/ADM1/geoBoundaries-MOZ-ADM1.geojson",
+  "note": "geoBoundaries gbOpen MOZ ADM1 (commit 9469f09)",
+  "bytes": 2595275,
+  "sha256": "938f3e1aea3885bb0dde3db6b2399b364155516cb612a605a87d57032afb17bb",
+  "accessed": "2026-11-19"
+ },
+ "boundaries/moz_ADM2.geojson": {
+  "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/MOZ/ADM2/geoBoundaries-MOZ-ADM2.geojson",
+  "note": "geoBoundaries gbOpen MOZ ADM2 (commit 9469f09)",
+  "bytes": 24879690,
+  "sha256": "5f04bb75bcb08092451f8626f7113830abfe726c1fad5309107309ab6cceab65",
+  "accessed": "2026-11-19"
+ },
+ "boundaries/moz_ADM1_simplified.geojson": {
+  "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/MOZ/ADM1/geoBoundaries-MOZ-ADM1_simplified.geojson",
+  "note": "geoBoundaries ADM1, simplified",
+  "bytes": 265588,
+  "sha256": "453908a723bc988d958aa5c22a053391b30d0edbcb89f087650071940a528fd7",
+  "accessed": "2026-11-19"
+ },
+ "boundaries/moz_ADM2_simplified.geojson": {
+  "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/MOZ/ADM2/geoBoundaries-MOZ-ADM2_simplified.geojson",
+  "note": "geoBoundaries ADM2, simplified",
+  "bytes": 2565929,
+  "sha256": "c50d41139d653bb03889cdf383d72a3cf851b5b576f406dfb0bc3a1b70de2bb9",
+  "accessed": "2026-11-19"
+ },
+ "boundaries/adm2_meta.json": {
+  "url": "https://www.geoboundaries.org/api/current/gbOpen/MOZ/ADM2/",
+  "note": "geoBoundaries API record for MOZ ADM2",
+  "bytes": 1823,
+  "sha256": "06ed442463e343bb953b57123d19cac360a32835fef00852ba08e44502ccae10",
+  "accessed": "2026-11-19"
+ }
+}
