@@ -47,7 +47,7 @@
                 if (el) {
                     el.setAttribute('tabindex', '0'); el.setAttribute('role', 'button');
                     el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(id); } });
-                    el.addEventListener('focus', () => select(id));
+                    el.addEventListener('focus', () => select(id, true));
                 }
             });
             addEventListener('resize', () => map.invalidateSize());
@@ -77,12 +77,12 @@
                     + `<span class="xp-main">${esc(measure.label)} ${fmt(measure, v)}</span><br>${others}`
                     + `<span class="xp-across">${across}</span>`;
             };
-            const select = id => {
+            const select = (id, keepFocus) => {
                 selected = id;
                 layer.eachLayer(l => {
                     const on = l.feature.properties.id === id;
                     l.setStyle({ color: on ? '#111111' : '#ffffff', weight: on ? 2.6 : 0.8 });
-                    if (on) l.bringToFront();
+                    if (on && !keepFocus) l.bringToFront();   // moving the node would drop keyboard focus
                 });
                 picker.value = id == null ? '' : String(id);
                 readout.innerHTML = id == null ? 'Select a district on the map, on the list above it, or use Tab and Enter.' : detail(id);
