@@ -48,6 +48,8 @@ def test_no_emoji_in_published_text():
         if p.exists():
             s = p.read_text(encoding="utf-8")
             assert not emoji.search(s), p
+            for word in ("Cla" + "ude", "Anthr" + "opic"):
+                assert word not in s, (p, word)
 
 
 def test_no_visible_placeholder_on_page():
