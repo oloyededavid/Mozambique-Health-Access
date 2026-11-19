@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+
+# Source downloads and large intermediate grids; rebuild with scripts/s00_download.py to s03_scenarios.py
+data/
+paper/_page_body.md
