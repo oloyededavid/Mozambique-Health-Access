@@ -49,3 +49,16 @@ def test_no_emoji_or_attribution_in_published_text():
             s = p.read_text(encoding="utf-8")
             assert not emoji.search(s), p
             assert "Claude" not in s and "Anthropic" not in s, p
+
+
+def test_no_visible_placeholder_on_page():
+    html = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
+    visible = re.sub(r"<!--.*?-->", "", html, flags=re.S)
+    assert "PLACEHOLDER" not in visible.upper().replace("PLACEHOLDERS", "")
+    assert "draft: author to revise" in html
+
+
+def test_figure_numbers_match_file_names():
+    paper = (ROOT / "paper" / "paper.md").read_text(encoding="utf-8")
+    for num, f in re.findall(r"\*\*Figure (\d+)\.\*\*.*?\]\(paper/figures/fig(\d+)_", paper):
+        assert num == f

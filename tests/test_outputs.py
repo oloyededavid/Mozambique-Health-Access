@@ -106,3 +106,11 @@ def test_osm_rule_on_raw_file(access):
     cls = [access.osm_class(a, h) for a, h in zip(g["amenity"], g["healthcare"])]
     F = J("facilities")["lists"]["B"]
     assert cls.count("pharmacy") == F["n_pharmacy"] and cls.count("hospital") == F["n_hospital"]
+
+
+def test_paired_bootstrap_file():
+    Q = J("paired")
+    for key in ("list_vs_hospitals", "list_vs_population", "list_vs_mode"):
+        for mode in ("motorized", "walking"):
+            q = Q[f"{key}|{mode}"]
+            assert q["ci95"][0] <= q["diff"] <= q["ci95"][1] and q["n_boot"] > 1000
