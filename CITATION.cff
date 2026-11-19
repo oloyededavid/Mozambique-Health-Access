@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this analysis or its data, please cite it as below."
+title: "Travel time to health facilities in Mozambique: how district access estimates change with the facility list, mode of travel and facility functionality"
+type: software
+license:
+  - MIT
+  - CC-BY-4.0
+authors:
+  - given-names: David
+    family-names: Oloyede
+    alias: oloyededavid
+repository-code: "https://github.com/oloyededavid/Mozambique-Health-Access"
+url: "https://oloyededavid.github.io/Mozambique-Health-Access/"
+keywords:
+  - Mozambique
+  - geographic access
+  - health facilities
+  - travel time
+  - friction surface
+  - OpenStreetMap
+  - HeRAMS
+  - WorldPop
