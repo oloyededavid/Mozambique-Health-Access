@@ -11,14 +11,20 @@
   "note": "HOT OpenStreetMap export, health facilities of Mozambique (HDX hotosm_moz_health_facilities), ODbL",
   "bytes": 145838,
   "sha256": "ecf4c723bfceae4c79c1e3b6534ef2b8b90eddec463b2f65f01f486a893320e8",
-  "accessed": "2026-11-19"
+  "accessed": "2026-11-19",
+  "hdx_dataset": "hotosm_moz_health_facilities",
+  "hdx_dataset_last_modified": "2026-11-02T19:52:11.494553",
+  "hdx_resource_last_modified": "2026-11-02T19:52:03.127363"
  },
  "herams/moz_herams_2022-2024_by-qtr.xlsx": {
   "url": "https://data.humdata.org/dataset/0dd449f0-558d-4e30-9f7b-cedbeef8949e/resource/2aeb63f8-f5d1-4860-a9dd-f2df437d7e8c/download/moz_herams_2022-2024_by-qtr.xlsx",
   "note": "WHO HeRAMS Mozambique 2022-2024 by quarter (HDX 'Mozambique: Health Facilities'), CC BY",
   "bytes": 1250123,
   "sha256": "b3b6d0dc8333c9c6fa8cf27e2102471725112bd0e4371f5385224b3e348c18c1",
-  "accessed": "2026-11-19"
+  "accessed": "2026-11-19",
+  "hdx_dataset": "health-cluster-mozambique",
+  "hdx_dataset_last_modified": "2024-09-24T11:13:30.888620",
+  "hdx_resource_last_modified": "2024-09-24T11:13:30.888620"
  },
  "friction/motorized_2020.tif": {
   "url": "https://data.malariaatlas.org/geoserver/Accessibility/wcs?service=WCS&version=2.0.1&request=GetCoverage&subset=Long(29.2,41.9)&subset=Lat(-27.9,-9.4)&format=image/tiff&coverageId=Accessibility__202001_Global_Motorized_Friction_Surface",

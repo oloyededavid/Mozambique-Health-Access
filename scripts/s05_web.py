@@ -52,7 +52,7 @@ def main():
                              None if d["median_min"] is None else round(d["median_min"], 1)] if ok else None)
             out["values"][f"{k}|{mode}"] = rows
     (A.DOCS_DATA / "district_values.json").write_text(json.dumps(out, separators=(",", ":"), ensure_ascii=False) + "\n", encoding="utf-8")
-    for f in ("comparisons.json", "facilities.json", "population.json", "sources.json"):
+    for f in ("comparisons.json", "paired.json", "facilities.json", "population.json", "sources.json"):
         shutil.copy(A.OUT / f, A.DOCS_DATA / f)
     # district table for download: main population layer, both modes, the three main lists
     rows = []

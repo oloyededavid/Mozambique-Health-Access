@@ -1,0 +1,58 @@
+{
+ "note": "positive diff: the facility list (A against B) keeps districts in a more similar order than the other choice",
+ "districts_resampled_as_independent": true,
+ "list_vs_hospitals|motorized": {
+  "diff": 0.12165198524492882,
+  "ci95": [
+   0.01379989535404095,
+   0.2342638997192288
+  ],
+  "share_positive": 0.989,
+  "n_boot": 2000
+ },
+ "list_vs_population|motorized": {
+  "diff": -0.005697882198861692,
+  "ci95": [
+   -0.12153050626088262,
+   0.11392962950504792
+  ],
+  "share_positive": 0.471,
+  "n_boot": 2000
+ },
+ "list_vs_mode|motorized": {
+  "diff": 0.16995281921199012,
+  "ci95": [
+   0.04561281044401617,
+   0.30092454142281505
+  ],
+  "share_positive": 0.998,
+  "n_boot": 2000
+ },
+ "list_vs_hospitals|walking": {
+  "diff": 0.12483694296144243,
+  "ci95": [
+   -0.04370946796556743,
+   0.2871337618003974
+  ],
+  "share_positive": 0.92,
+  "n_boot": 2000
+ },
+ "list_vs_population|walking": {
+  "diff": -0.06805678615347588,
+  "ci95": [
+   -0.21758464876883848,
+   0.07777727686815847
+  ],
+  "share_positive": 0.1795,
+  "n_boot": 2000
+ },
+ "list_vs_mode|walking": {
+  "diff": 0.06112459582877927,
+  "ci95": [
+   -0.11485191572858777,
+   0.23372188725034213
+  ],
+  "share_positive": 0.755,
+  "n_boot": 2000
+ }
+}
