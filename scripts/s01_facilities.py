@@ -114,9 +114,21 @@ def load_osm():
     return out, n_all, {str(k): int(v) for k, v in amen.items()}, {str(k): int(v) for k, v in excluded.items()}
 
 
-def load_herams(a2):
-    raw = pd.read_excel(A.RAW / "herams" / "moz_herams_2022-2024_by-qtr.xlsx", sheet_name="HeRAMS_Cabo_Nampula_Zambezia", header=1)
-    n_rows = len(raw)
+def province_match(reported, located, list_code):
+    """Whether a facility's point falls in the province its source reports. None when it cannot be checked
+    (list B, or a point outside every province). List A's 'Maputo Cidade' and 'Maputo Provincia' both count as
+    Maputo, because Maputo city is part of Maputo in the geoBoundaries ADM1 layer used here."""
+    if list_code not in ("A", "H") or not isinstance(located, str) or not isinstance(reported, str):
+        return None
+    rep = reported.replace(" Provincia", "").replace(" Cidade", "")
+    return A.norm_text(rep) == A.norm_text(located)
+
+
+def herams_latest(raw):
+    """One row per HeRAMS facility from the assessment rows. Facility codes are reused across different facilities,
+    so a facility is its cleaned name plus its 'Province / District' label. The latest assessment gives the status;
+    coordinates come from the latest assessment that has them. One known row has its coordinates one column to the
+    right (a road name in the latitude field) and is shifted back."""
     d = raw.copy()
     d["name_clean"] = d.MoSD2.map(A.fix_mojibake).astype(str).str.strip()
     d["prov_rep"] = d.GEO1.astype(str).str.split("/").str[0].str.strip()
@@ -125,14 +137,12 @@ def load_herams(a2):
     d["qkey"] = d.Quarter.map(A.quarter_key)
     lat = pd.to_numeric(d.MoSDGPS_SQ001, errors="coerce"); lon = pd.to_numeric(d.MoSDGPS_SQ002, errors="coerce")
     fix = pd.Series("as given", index=d.index)
-    # one row has the coordinates one column to the right (a road name in the latitude field)
     shifted = lat.isna() & d.MoSDGPS_SQ001.notna() & pd.to_numeric(d.MoSDGPS1, errors="coerce").notna()
     lat = lat.where(~shifted, pd.to_numeric(d.MoSDGPS_SQ002, errors="coerce"))
     lon = lon.where(~shifted, pd.to_numeric(d.MoSDGPS1, errors="coerce"))
     fix[shifted] = "shifted column"
     d["lat"], d["lon"], d["coord_fix"] = lat, lon, fix
     d = d.sort_values(["key", "qkey", "date"])
-    # latest assessment per facility; coordinates from the latest assessment that has them
     latest = d.groupby("key").tail(1).set_index("key")
     coords = d[d.lat.notna() & d.lon.notna()].groupby("key").tail(1).set_index("key")[["lat", "lon", "coord_fix"]]
     latest = latest.drop(columns=["lat", "lon", "coord_fix"]).join(coords, how="left")
@@ -144,7 +154,12 @@ def load_herams(a2):
     }).reset_index(drop=True)
     out["hospital"] = out["type"].str.contains("hospital", case=False, na=False)
     out["class"] = np.where(out.hospital, "hospital", "facility")
-    return out, n_rows, int(raw.subject_id.nunique())
+    return out
+
+
+def load_herams():
+    raw = pd.read_excel(A.RAW / "herams" / "moz_herams_2022-2024_by-qtr.xlsx", sheet_name="HeRAMS_Cabo_Nampula_Zambezia", header=1)
+    return herams_latest(raw), len(raw), int(raw.subject_id.nunique())
 
 
 def main():
@@ -156,18 +171,14 @@ def main():
 
     fa, n_maina_moz = load_maina()
     fb, n_osm_all, osm_amenity, osm_excluded = load_osm()
-    fh, n_h_rows, n_h_subjects = load_herams(a2)
+    fh, n_h_rows, n_h_subjects = load_herams()
     fh_coords = fh[fh.lat.notna() & fh.lon.notna()].copy()
     fac = pd.concat([fa, fb, fh_coords], ignore_index=True)
     fac = locate(fac, a1, a2, a0p)
     fac["in_sea"], fac["in_inland_water"] = grid_flags(fac)
     fac["inside_moz"] = fac.dist_outside_m <= BORDER_TOL_M
     # HeRAMS: does the point fall in the province it reports?
-    fac["province_match"] = [A.norm_text(p) == A.norm_text(q) if isinstance(q, str) and l in ("A", "H") else None
-                             for p, q, l in zip(fac.admin1_reported.str.replace(" Provincia", "").str.replace(" Cidade", ""), fac.province_loc, fac.list)]
-    # Maputo Cidade is a separate province in list A but part of Maputo in the geoBoundaries ADM1 used here
-    fac.loc[(fac.list == "A") & fac.admin1_reported.isin(["Maputo Cidade", "Maputo Provincia"]), "province_match"] = \
-        fac.loc[(fac.list == "A") & fac.admin1_reported.isin(["Maputo Cidade", "Maputo Provincia"]), "province_loc"].eq("Maputo")
+    fac["province_match"] = [province_match(p, q, l) for p, q, l in zip(fac.admin1_reported, fac.province_loc, fac.list)]
     # HeRAMS facilities whose point is outside the province they report are not used (coordinates not trusted)
     fac["use"] = True
     fac.loc[fac.list.isin(["A", "B", "H"]) & ~fac.inside_moz, "use"] = False
@@ -224,6 +235,13 @@ def main():
     mutual = (kba[kab] == np.arange(len(a))) & (dab <= 1000)
     match["mutual_A_B_within_1km"] = int(mutual.sum())
     S["matching"] = match
+    # facilities used per district, for statements such as "list B has no facility in this district"
+    used = fac[fac.use & (fac.district_id >= 0)]
+    S["used_by_district"] = {code: {a2.district.iloc[i]: int(((used.list == code) & (used.district_id == a2.district_id.iloc[i]) &
+                                                               (used["class"] != "pharmacy")).sum()) for i in range(len(a2))}
+                             for code in ("A", "B", "H")}
+    S["lists"]["B"]["n_pharmacy_used"] = int((lst("B").use & (lst("B")["class"] == "pharmacy")).sum())
+    S["lists"]["B"]["n_excluded"] = int(sum(osm_excluded.values()))
     S["districts"] = {"n": int(len(a2)), "n_provinces": int(a1.shape[0]), "provinces": sorted(a1.province.tolist())}
     S["border_tolerance_m"] = BORDER_TOL_M
     S["osm_rule"] = {"facility_amenity": sorted(A.OSM_HEALTH_AMENITY - {"hospital"}), "hospital": "amenity=hospital, or healthcare=hospital when amenity is missing",
