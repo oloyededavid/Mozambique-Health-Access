@@ -47,7 +47,7 @@ def mins(x):
 
 
 def load():
-    return {k: json.loads((OUT / f"{k}.json").read_text(encoding="utf-8")) for k in ("facilities", "population", "scenarios", "comparisons", "sources")}
+    return {k: json.loads((OUT / f"{k}.json").read_text(encoding="utf-8")) for k in ("facilities", "population", "scenarios", "comparisons", "sources", "paired")}
 
 
 def build(J):
@@ -60,6 +60,20 @@ def build(J):
     LA, LB, LH = F["lists"]["A"], F["lists"]["B"], F["lists"]["H"]
     M = F["matching"]
     v = {"date": date.today().strftime("%B %Y")}
+    Q, SRC = J["paired"], J["sources"]
+    osm_mod = SRC["osm/health_facilities.parquet"].get("hdx_resource_last_modified")
+    need(osm_mod is not None, "sources.json records the HDX date of the OpenStreetMap file")
+    od = date.fromisoformat(osm_mod[:10])
+    v["osm_date"] = f"{od.day} {od.strftime('%B %Y')}"
+    ex = LB["excluded_types"]
+    need(LB["n_excluded"] == sum(ex.values()) == LB["n_features"] - LB["n_facility"] - LB["n_hospital"] - LB["n_pharmacy"],
+         "the excluded OpenStreetMap features account for the rest of the file")
+    v["b_excl"] = str(LB["n_excluded"])
+    v["b_excl_list"] = ", ".join(f"`{t if '=' in t else 'amenity=' + t}` ({n})" for t, n in sorted(ex.items(), key=lambda x: -x[1]))
+    v["b_pharm_used"] = str(LB["n_pharmacy_used"])
+    need(sc["B_pharm"]["n_facilities"] - sc["B"]["n_facilities"] == LB["n_pharmacy_used"], "the pharmacy run adds exactly the used pharmacies")
+    v["h_non_file"] = str(LH["status_latest"].get("Non-Functioning", 0))
+    need(LH["status_latest"].get("Non-Functioning", 0) >= LH["status_used"].get("Non-Functioning", 0), "used non-functioning count is within the file count")
 
     # ---------------------------------------------------------------- data
     need(LA["n_rows_mozambique"] == LA["n_points"], "every list A row for Mozambique has coordinates")
@@ -169,8 +183,8 @@ def build(J):
         row("List B against list B with pharmacies", lambda m: cp("B", "B_pharm", m)),
         row("Sea closed against sea passable (list A)", lambda m: cp("A", "A_sea", m)),
         row("Constrained against unconstrained population (A and B)", lambda m: C["population_layer"][f"AB|{m}|60"]),
-        row(f"HeRAMS: all listed against non-functioning removed ({C['n_compared_herams']} districts)", lambda m: ch("H_all", "H_func", m)),
-        row(f"HeRAMS: all listed against fully functioning only ({C['n_compared_herams']} districts)", lambda m: ch("H_all", "H_fully", m)),
+        row(f"HeRAMS: all used facilities against non-functioning removed ({C['n_compared_herams']} districts)", lambda m: ch("H_all", "H_func", m)),
+        row(f"HeRAMS: all used facilities against fully functioning only ({C['n_compared_herams']} districts)", lambda m: ch("H_all", "H_fully", m)),
         row("List A against MAP's published layer (not independent)", lambda m: cp("A", "published", m)),
     ]
     v["cmp_table"] = "\n".join(trows)
@@ -199,6 +213,24 @@ def build(J):
         "sea_max_m": pp(cp("A", "A_sea", "motorized")["max_abs_change"]), "sea_d_m": cp("A", "A_sea", "motorized")["max_change_district"],
         "sea_max_w": pp(cp("A", "A_sea", "walking")["max_abs_change"]),
     })
+    UB = F["used_by_district"]
+    for key in ("ab_max_m_d", "ab_max_w_d"):
+        need(UB["B"][v[key]] == 0, f"list B has no facility in {v[key]}")
+    v["ab_max_m_na"] = str(UB["A"][v["ab_max_m_d"]]); v["ab_max_w_na"] = str(UB["A"][v["ab_max_w_d"]])
+    hm, hw = cp("AB", "AB_hosp", "motorized"), cp("AB", "AB_hosp", "walking")
+    v["hosp_ci_m"] = ci(hm["spearman_ci95"]); v["hosp_ci_w"] = ci(hw["spearman_ci95"])
+    overlap = lambda a, b: a[0] <= b[1] and b[0] <= a[1]  # noqa: E731
+    for m, other in (("motorized", hm), ("walking", hw), ("motorized", mo), ("walking", mo)):
+        need(overlap(cp("A", "B", m)["spearman_ci95"], other["spearman_ci95"]), f"separate intervals overlap ({m})")
+    for k, key in (("hosp", "list_vs_hospitals"), ("mode", "list_vs_mode"), ("pop", "list_vs_population")):
+        for m in MODES:
+            q = Q[f"{key}|{m}"]
+            v[f"pd_{k}_{m[0]}"] = f"{q['diff']:.2f}".replace("-", "−"); v[f"pd_{k}_{m[0]}_ci"] = ci(q["ci95"]).replace("-", "−")
+    need(Q["list_vs_hospitals|motorized"]["ci95"][0] > 0 and Q["list_vs_mode|motorized"]["ci95"][0] > 0, "paired intervals exclude zero by motor")
+    need(Q["list_vs_hospitals|walking"]["ci95"][0] < 0 < Q["list_vs_hospitals|walking"]["ci95"][1]
+         and Q["list_vs_mode|walking"]["ci95"][0] < 0 < Q["list_vs_mode|walking"]["ci95"][1], "paired intervals include zero on foot")
+    for m in MODES:
+        need(Q[f"list_vs_population|{m}"]["ci95"][0] < 0 < Q[f"list_vs_population|{m}"]["ci95"][1], f"population and list not separable ({m})")
     need(ab_m["spearman"] < cp("A", "AB", "motorized")["spearman"], "adding list B to A changes rankings less than replacing A with B")
     need(cp("A", "A_cross", "motorized")["n_change_over_10pp"] == 0, "cross-border facilities move no district by more than 10 points (motorized)")
     need(mo["spearman"] < ab_m["spearman"], "mode changes district rankings more than the facility list (motorized)")
@@ -244,6 +276,8 @@ def build(J):
     need(h3("H_fully", "walking")["share_over_60"] > h3("H_func", "walking")["share_over_60"], "the strict rule raises the share")
     D = S["district_names"]; DP = dict(zip(D, S["district_provinces"]))
     need(DP[hs_m["max_change_district"]] == DP[hs_w["max_change_district"]] == DP[hf_m["max_change_district"]], "largest HeRAMS changes are in one province")
+    need(hs_m["max_change_district"] == hs_w["max_change_district"], "the strict rule's largest change is in the same district in both modes")
+    v["hs_d"] = hs_m["max_change_district"]
     v["hs_prov"] = DP[hs_m["max_change_district"]]
     need(DP["Cidade De Maputo"] == "Maputo", "Maputo city is part of Maputo province in the ADM1 layer")
     need(hf_w["n_change_over_10pp"] <= 3, "only a few districts move by more than 10 points when non-functioning facilities are removed")
