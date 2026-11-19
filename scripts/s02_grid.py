@@ -47,7 +47,8 @@ def grid():
 
 
 def pop_table(path, a2, T, passable):
-    with rasterio.open(A.RAW / path) as s:
+    """path: a population GeoTIFF; a2: districts with geometry and district_id; T, passable: the travel grid."""
+    with rasterio.open(path) as s:
         PT, shape, nod = s.transform, s.shape, s.nodata
         dras = rasterize(((g, i + 1) for g, i in zip(a2.geometry, a2.district_id)), out_shape=shape, transform=PT, fill=0, dtype="uint8")
         nr, nc = passable.shape
@@ -104,7 +105,7 @@ def main():
                     "moz_cells": int(moz.sum()), "moz_cells_impassable": int((moz & ~passable).sum())},
            "main_layer": MAIN_LAYER, "layers": {}}
     for key, (path, label) in LAYERS.items():
-        tab, info = pop_table(path, a2, T, passable)
+        tab, info = pop_table(A.RAW / path, a2, T, passable)
         np.savez_compressed(A.DERIVED / f"pop_{key}.npz", **tab)
         info["label"] = label
         info["by_district"] = np.bincount(tab["district"][tab["district"] >= 0], weights=tab["pop"][tab["district"] >= 0],
